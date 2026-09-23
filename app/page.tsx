@@ -1,105 +1,141 @@
-"use client"
-
-import * as React from "react"
-import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar"
-import { CSidebar1 } from "@/components/examples/c-sidebar-1"
-import { DashboardHeader } from "@/components/dashboard/dashboard-header"
-import { AIStatsCards } from "@/components/dashboard/ai-stats-cards"
-import { AIWorkflowsTable } from "@/components/dashboard/ai-workflows-table"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { WorkflowProvider } from "@/lib/workflow-context"
-import { NewAutomationDialog } from "@/components/dashboard/new-automation-dialog"
-import {
-  SparklesIcon,
-  ZapIcon,
-  ActivityIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  PlusIcon,
-} from "lucide-react"
-
-export default function DashboardPage() {
+export default function Home() {
   return (
-    <WorkflowProvider>
-      <SidebarProvider className="relative h-dvh min-h-0 w-full overflow-hidden bg-background">
-        {/* Installed Left Sidebar Navigation */}
-        <CSidebar1 />
+    <main className="min-h-screen bg-background text-foreground">
 
-        {/* Main Content Area */}
-        <SidebarInset className="min-w-0 flex flex-col h-full overflow-hidden bg-background">
-          {/* Sticky Top Header */}
-          <DashboardHeader workspaceName="Corebot AI" currentPage="AI Platform" />
+      {/* ── NAVBAR ─────────────────────────────────── */}
+      <nav className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
+        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+          <a href="/" className="flex items-center gap-2.5">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <polygon
+                points="16,3 27,9.5 27,22.5 16,29 5,22.5 5,9.5"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinejoin="round"
+                className="text-primary"
+              />
+              <circle cx="16" cy="16" r="3" className="fill-primary" />
+            </svg>
+            <span className="text-base font-semibold tracking-tight">
+              <span className="font-bold">CORE</span>
+              <span className="font-normal">BOT</span>
+            </span>
+          </a>
 
-        {/* Scrollable Dashboard Body */}
-        <div className="flex-1 overflow-y-auto">
-          <div className="mx-auto w-full max-w-[1400px] p-4 sm:p-6 lg:p-8 space-y-6">
-            {/* Overview Banner */}
-            <div className="relative overflow-hidden rounded-xl border border-border/80 bg-gradient-to-r from-violet-500/10 via-background to-cyan-500/10 p-5 sm:p-6 backdrop-blur-xs">
-              <div className="relative z-10 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2">
-                    <Badge
-                      variant="purple"
-                      size="xs"
-                      radius="full"
-                      className="gap-1 font-mono text-[10px]"
-                    >
-                      <SparklesIcon className="size-3 text-violet-500" />
-                      Corebot Orchestrator v2.4
-                    </Badge>
-                    <Badge
-                      variant="outline"
-                      size="xs"
-                      radius="full"
-                      className="hidden sm:inline-flex font-mono text-[10px] text-muted-foreground"
-                    >
-                      Multi-Agent Mesh
-                    </Badge>
-                  </div>
-                  <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground font-heading">
-                    AI Automation Platform
-                  </h1>
-                  <p className="text-xs sm:text-sm text-muted-foreground max-w-xl">
-                    Deploy, monitor, and scale autonomous multi-agent pipelines with automated reasoning, error recovery, and low-latency token streaming.
-                  </p>
-                </div>
+          <div className="hidden items-center gap-8 md:flex">
+            <a href="#services" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Services</a>
+            <a href="#process" className="text-sm text-muted-foreground transition-colors hover:text-foreground">How it works</a>
+            <a href="#pricing" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Pricing</a>
+            <a href="#contact" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Contact</a>
+          </div>
 
-                <div className="flex flex-wrap items-center gap-2.5">
-                  <div className="flex items-center gap-2 rounded-lg border border-border/80 bg-card/80 px-3 py-1.5 shadow-2xs">
-                    <span className="relative flex size-2">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                      <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
-                    </span>
-                    <span className="text-xs font-mono text-muted-foreground">Gateway:</span>
-                    <span className="text-xs font-semibold text-foreground font-mono">14.2 ms</span>
-                  </div>
+          <a
+            href="#contact"
+            className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            Book a free call
+          </a>
+        </div>
+      </nav>
 
-                  <Button
-                    size="sm"
-                    className="cursor-pointer gap-1.5 bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white shadow-xs font-medium text-xs px-3"
-                  >
-                    <ZapIcon className="size-3.5" />
-                    <span>Run Diagnostics</span>
-                  </Button>
-                </div>
+      {/* ── HERO ───────────────────────────────────── */}
+      <section className="relative overflow-hidden">
+        <div className="mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-32 md:pb-28">
+          <p className="mb-6 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+            AI Automation Agency · Jharkhand, India
+          </p>
+
+          <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight md:text-6xl">
+            Automate the work
+            <br />
+            that&apos;s slowing you down.
+          </h1>
+
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            Corebot builds custom AI automations for small and mid-sized businesses — so your team stops doing repetitive tasks and starts doing the work that actually grows revenue.
+          </p>
+
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href="#contact"
+              className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              Book a free call
+            </a>
+            <a
+              href="#process"
+              className="rounded-lg border border-border bg-transparent px-6 py-3 text-sm font-medium transition-colors hover:bg-secondary"
+            >
+              See how it works
+            </a>
+          </div>
+
+          <p className="mt-8 text-sm text-muted-foreground">
+            No retainers. No lock-in. You own everything we build.
+          </p>
+        </div>
+      </section>
+
+      {/* ── FOOTER ─────────────────────────────────── */}
+      <footer className="border-t border-border/60 mt-24">
+        <div className="mx-auto max-w-6xl px-6 py-12">
+          <div className="grid gap-10 md:grid-cols-4">
+            <div className="md:col-span-1">
+              <div className="flex items-center gap-2.5">
+                <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                  <polygon
+                    points="16,3 27,9.5 27,22.5 16,29 5,22.5 5,9.5"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                    className="text-primary"
+                  />
+                  <circle cx="16" cy="16" r="3" className="fill-primary" />
+                </svg>
+                <span className="text-base font-semibold tracking-tight">
+                  <span className="font-bold">CORE</span>
+                  <span className="font-normal">BOT</span>
+                </span>
               </div>
+              <p className="mt-3 text-sm text-muted-foreground">
+                AI Automation Agency
+              </p>
             </div>
 
-            {/* Row of 4 Stat Cards */}
-            <section aria-label="Platform Statistics">
-              <AIStatsCards />
-            </section>
+            <div>
+              <h3 className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Services</h3>
+              <ul className="mt-4 space-y-2 text-sm">
+                <li><a href="#services" className="text-muted-foreground transition-colors hover:text-foreground">Lead Capture</a></li>
+                <li><a href="#services" className="text-muted-foreground transition-colors hover:text-foreground">Ops Automation</a></li>
+                <li><a href="#services" className="text-muted-foreground transition-colors hover:text-foreground">AI Assistants</a></li>
+              </ul>
+            </div>
 
-            {/* AI Workflows & Executions Data Table */}
-            <section aria-label="Active Automation Pipelines">
-              <AIWorkflowsTable />
-            </section>
+            <div>
+              <h3 className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Company</h3>
+              <ul className="mt-4 space-y-2 text-sm">
+                <li><a href="#process" className="text-muted-foreground transition-colors hover:text-foreground">How it works</a></li>
+                <li><a href="#pricing" className="text-muted-foreground transition-colors hover:text-foreground">Pricing</a></li>
+                <li><a href="#contact" className="text-muted-foreground transition-colors hover:text-foreground">Contact</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Contact</h3>
+              <ul className="mt-4 space-y-2 text-sm">
+                <li><a href="mailto:hello@corebot.in" className="text-muted-foreground transition-colors hover:text-foreground">hello@corebot.in</a></li>
+                <li><a href="https://wa.me/918102417697" className="text-muted-foreground transition-colors hover:text-foreground">WhatsApp</a></li>
+                <li className="text-muted-foreground">Jharkhand, India</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-12 border-t border-border/60 pt-6 text-center text-xs text-muted-foreground">
+            © 2026 Corebot Solutions. All rights reserved. Built in Jharkhand, India.
           </div>
         </div>
-      </SidebarInset>
-    </SidebarProvider>
-    <NewAutomationDialog />
-  </WorkflowProvider>
+      </footer>
+
+    </main>
   )
 }
