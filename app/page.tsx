@@ -1,3 +1,6 @@
+import Reveal from "./components/Reveal";
+import ToolMarquee from "./components/ToolMarquee";
+import ContactForm from "./components/ContactForm";
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
@@ -39,8 +42,14 @@ export default function Home() {
       </nav>
 
       {/* ── HERO ───────────────────────────────────── */}
-      <section className="relative overflow-hidden">
-        <div className="mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-32 md:pb-28">
+      <section className="relative isolate overflow-hidden">
+        {/* Blue radial glow behind hero content */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute left-1/2 top-[10%] h-[600px] w-[1100px] -translate-x-1/2 rounded-full bg-primary/40 blur-[100px]"
+          style={{ background: "radial-gradient(closest-side, oklch(0.62 0.19 258 / 0.55), transparent)" }}
+        />
+        <div className="relative z-10 mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-32 md:pb-28">
           <p className="mb-6 font-mono text-xs uppercase tracking-widest text-muted-foreground">
             AI Automation Agency · Jharkhand, India
           </p>
@@ -76,215 +85,226 @@ export default function Home() {
         </div>
       </section>
 
+            {/* ── TOOL MARQUEE ───────────────────────────── */}
+      <ToolMarquee />
+
       {/* ── SERVICES ───────────────────────────────── */}
       <section id="services" className="mx-auto max-w-6xl px-6 py-24">
-        <p className="mb-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-          01 / Services
-        </p>
-        <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
-          What we build
-        </h2>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          Every automation is custom-built for your workflow — not a template.
-        </p>
+        <Reveal>
+          <p className="mb-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+            01 / Services
+          </p>
+          <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
+            What we build
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+            Every automation is custom-built for your workflow — not a template.
+          </p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <div className="rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/40">
-            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
-                <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
-              </svg>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            <div className="rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/40">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+                  <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold">Lead Capture & Follow-up</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Automatically capture leads from your website, WhatsApp, and email — then follow up within seconds, not days.
+              </p>
             </div>
-            <h3 className="text-lg font-semibold">Lead Capture & Follow-up</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Automatically capture leads from your website, WhatsApp, and email — then follow up within seconds, not days.
-            </p>
-          </div>
 
-          <div className="rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/40">
-            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
-                <circle cx="12" cy="12" r="3" />
-                <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24" />
-              </svg>
+            <div className="rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/40">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold">Internal Ops Automation</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Connect your tools so data moves on its own. No more copying between sheets, CRMs, and inboxes.
+              </p>
             </div>
-            <h3 className="text-lg font-semibold">Internal Ops Automation</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Connect your tools so data moves on its own. No more copying between sheets, CRMs, and inboxes.
-            </p>
-          </div>
 
-          <div className="rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/40">
-            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-              </svg>
+            <div className="rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/40">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold">AI Assistants & Chatbots</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Custom AI assistants trained on your business — answering customers, qualifying leads, and drafting replies 24/7.
+              </p>
             </div>
-            <h3 className="text-lg font-semibold">AI Assistants & Chatbots</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Custom AI assistants trained on your business — answering customers, qualifying leads, and drafting replies 24/7.
-            </p>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ── PROCESS ────────────────────────────────── */}
       <section id="process" className="border-t border-border/60 mx-auto max-w-6xl px-6 py-24">
-        <p className="mb-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-          02 / Process
-        </p>
-        <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
-          How it works
-        </h2>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          From first call to live automation in days, not months.
-        </p>
+        <Reveal>
+          <p className="mb-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+            02 / Process
+          </p>
+          <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
+            How it works
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+            From first call to live automation in days, not months.
+          </p>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
-          <div>
-            <p className="font-mono text-3xl font-light text-primary">01</p>
-            <h3 className="mt-4 text-lg font-semibold">Free discovery call</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              A 30-minute call to understand your workflow and find the tasks worth automating.
-            </p>
-          </div>
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            <div>
+              <p className="font-mono text-3xl font-light text-primary">01</p>
+              <h3 className="mt-4 text-lg font-semibold">Free discovery call</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                A 30-minute call to understand your workflow and find the tasks worth automating.
+              </p>
+            </div>
 
-          <div>
-            <p className="font-mono text-3xl font-light text-primary">02</p>
-            <h3 className="mt-4 text-lg font-semibold">We build it</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              You get a working automation, tested on your real data. No theory, no slide decks.
-            </p>
-          </div>
+            <div>
+              <p className="font-mono text-3xl font-light text-primary">02</p>
+              <h3 className="mt-4 text-lg font-semibold">We build it</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                You get a working automation, tested on your real data. No theory, no slide decks.
+              </p>
+            </div>
 
-          <div>
-            <p className="font-mono text-3xl font-light text-primary">03</p>
-            <h3 className="mt-4 text-lg font-semibold">You own it</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              We hand over the keys, document everything, and stay available if you need us.
-            </p>
+            <div>
+              <p className="font-mono text-3xl font-light text-primary">03</p>
+              <h3 className="mt-4 text-lg font-semibold">You own it</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                We hand over the keys, document everything, and stay available if you need us.
+              </p>
+            </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ── PRICING ────────────────────────────────── */}
       <section id="pricing" className="border-t border-border/60 mx-auto max-w-6xl px-6 py-24">
-        <p className="mb-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-          03 / Pricing
-        </p>
-        <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
-          Simple, one-time pricing
-        </h2>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          No subscriptions. No surprise fees. Pay once, own it forever.
-        </p>
+        <Reveal>
+          <p className="mb-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+            03 / Pricing
+          </p>
+          <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
+            Simple, one-time pricing
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+            No subscriptions. No surprise fees. Pay once, own it forever.
+          </p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {/* Starter */}
-          <div className="flex flex-col rounded-xl border border-border bg-card p-8">
-            <h3 className="text-lg font-semibold">Starter</h3>
-            <p className="mt-4 font-mono text-3xl font-bold">₹14,999</p>
-            <p className="text-sm text-muted-foreground">one-time</p>
-            <ul className="mt-6 flex-1 space-y-3 text-sm">
-              <li className="flex items-start gap-2">
-                <span className="mt-1 text-primary">✓</span>
-                <span className="text-muted-foreground">1 automation</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 text-primary">✓</span>
-                <span className="text-muted-foreground">Up to 3 tools connected</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 text-primary">✓</span>
-                <span className="text-muted-foreground">7-day delivery</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 text-primary">✓</span>
-                <span className="text-muted-foreground">30-day support</span>
-              </li>
-            </ul>
-            <a href="#contact" className="mt-8 rounded-lg border border-border px-5 py-2.5 text-center text-sm font-medium transition-colors hover:bg-secondary">
-              Get started
-            </a>
-          </div>
-
-          {/* Growth — highlighted */}
-          <div className="relative flex flex-col rounded-xl border-2 border-primary bg-card p-8">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
-              Most popular
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {/* Starter */}
+            <div className="flex flex-col rounded-xl border border-border bg-card p-8">
+              <h3 className="text-lg font-semibold">Starter</h3>
+              <p className="mt-4 font-mono text-3xl font-bold">₹14,999</p>
+              <p className="text-sm text-muted-foreground">one-time</p>
+              <ul className="mt-6 flex-1 space-y-3 text-sm">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 text-primary">✓</span>
+                  <span className="text-muted-foreground">1 automation</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 text-primary">✓</span>
+                  <span className="text-muted-foreground">Up to 3 tools connected</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 text-primary">✓</span>
+                  <span className="text-muted-foreground">7-day delivery</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 text-primary">✓</span>
+                  <span className="text-muted-foreground">30-day support</span>
+                </li>
+              </ul>
+              <a href="#contact" className="mt-8 rounded-lg border border-border px-5 py-2.5 text-center text-sm font-medium transition-colors hover:bg-secondary">
+                Get started
+              </a>
             </div>
-            <h3 className="text-lg font-semibold">Growth</h3>
-            <p className="mt-4 font-mono text-3xl font-bold">₹34,999</p>
-            <p className="text-sm text-muted-foreground">one-time</p>
-            <ul className="mt-6 flex-1 space-y-3 text-sm">
-              <li className="flex items-start gap-2">
-                <span className="mt-1 text-primary">✓</span>
-                <span className="text-muted-foreground">Up to 3 automations</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 text-primary">✓</span>
-                <span className="text-muted-foreground">Unlimited tool connections</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 text-primary">✓</span>
-                <span className="text-muted-foreground">AI assistant included</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 text-primary">✓</span>
-                <span className="text-muted-foreground">14-day delivery</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 text-primary">✓</span>
-                <span className="text-muted-foreground">60-day support</span>
-              </li>
-            </ul>
-            <a href="#contact" className="mt-8 rounded-lg bg-primary px-5 py-2.5 text-center text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
-              Book a free call
-            </a>
-          </div>
 
-          {/* Custom */}
-          <div className="flex flex-col rounded-xl border border-border bg-card p-8">
-            <h3 className="text-lg font-semibold">Custom</h3>
-            <p className="mt-4 font-mono text-3xl font-bold">Let&apos;s talk</p>
-            <p className="text-sm text-muted-foreground">tailored quote</p>
-            <ul className="mt-6 flex-1 space-y-3 text-sm">
-              <li className="flex items-start gap-2">
-                <span className="mt-1 text-primary">✓</span>
-                <span className="text-muted-foreground">Complex workflows</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 text-primary">✓</span>
-                <span className="text-muted-foreground">Multi-team automation</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 text-primary">✓</span>
-                <span className="text-muted-foreground">Ongoing retainer available</span>
-              </li>
-            </ul>
-            <a href="#contact" className="mt-8 rounded-lg border border-border px-5 py-2.5 text-center text-sm font-medium transition-colors hover:bg-secondary">
-              Contact us
-            </a>
+            {/* Growth — highlighted */}
+            <div className="relative flex flex-col rounded-xl border-2 border-primary bg-card p-8">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
+                Most popular
+              </div>
+              <h3 className="text-lg font-semibold">Growth</h3>
+              <p className="mt-4 font-mono text-3xl font-bold">₹34,999</p>
+              <p className="text-sm text-muted-foreground">one-time</p>
+              <ul className="mt-6 flex-1 space-y-3 text-sm">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 text-primary">✓</span>
+                  <span className="text-muted-foreground">Up to 3 automations</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 text-primary">✓</span>
+                  <span className="text-muted-foreground">Unlimited tool connections</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 text-primary">✓</span>
+                  <span className="text-muted-foreground">AI assistant included</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 text-primary">✓</span>
+                  <span className="text-muted-foreground">14-day delivery</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 text-primary">✓</span>
+                  <span className="text-muted-foreground">60-day support</span>
+                </li>
+              </ul>
+              <a href="#contact" className="mt-8 rounded-lg bg-primary px-5 py-2.5 text-center text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
+                Book a free call
+              </a>
+            </div>
+
+            {/* Custom */}
+            <div className="flex flex-col rounded-xl border border-border bg-card p-8">
+              <h3 className="text-lg font-semibold">Custom</h3>
+              <p className="mt-4 font-mono text-3xl font-bold">Let&apos;s talk</p>
+              <p className="text-sm text-muted-foreground">tailored quote</p>
+              <ul className="mt-6 flex-1 space-y-3 text-sm">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 text-primary">✓</span>
+                  <span className="text-muted-foreground">Complex workflows</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 text-primary">✓</span>
+                  <span className="text-muted-foreground">Multi-team automation</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 text-primary">✓</span>
+                  <span className="text-muted-foreground">Ongoing retainer available</span>
+                </li>
+              </ul>
+              <a href="#contact" className="mt-8 rounded-lg border border-border px-5 py-2.5 text-center text-sm font-medium transition-colors hover:bg-secondary">
+                Contact us
+              </a>
+            </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ── FOUNDING CLIENTS ───────────────────────── */}
       <section className="border-t border-border/60 mx-auto max-w-6xl px-6 py-24">
-        <div className="rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/5 via-transparent to-transparent p-10 md:p-14">
-          <p className="mb-4 font-mono text-xs uppercase tracking-widest text-primary">
-            04 / Founding Clients
-          </p>
-          <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
-            We&apos;re taking on 3 founding clients.
-          </h2>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            Get your first automation built at 50% off in exchange for a testimonial and honest feedback. Only 3 spots.
-          </p>
-          <a href="#contact" className="mt-8 inline-block rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
-            Claim a founding spot
-          </a>
-        </div>
+        <Reveal>
+          <div className="rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/5 via-transparent to-transparent p-10 md:p-14">
+            <p className="mb-4 font-mono text-xs uppercase tracking-widest text-primary">
+              04 / Founding Clients
+            </p>
+            <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
+              We&apos;re taking on 3 founding clients.
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              Get your first automation built at 50% off in exchange for a testimonial and honest feedback. Only 3 spots.
+            </p>
+            <a href="#contact" className="mt-8 inline-block rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
+              Claim a founding spot
+            </a>
+          </div>
+        </Reveal>
       </section>
 
       {/* ── WHATSAPP CTA ───────────────────────────── */}
@@ -312,79 +332,31 @@ export default function Home() {
 
       {/* ── CONTACT ────────────────────────────────── */}
       <section id="contact" className="border-t border-border/60 mx-auto max-w-6xl px-6 py-24">
-        <div className="grid gap-12 md:grid-cols-2">
-          <div>
-            <p className="mb-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-              05 / Contact
-            </p>
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-              Tell us what&apos;s slowing you down
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              Fill this in and we&apos;ll reply within one business day.
-            </p>
-            <div className="mt-8 space-y-3 text-sm">
-              <p className="text-muted-foreground">
-                Or email us directly at{" "}
-                <a href="mailto:hello@corebot.in" className="text-primary transition-colors hover:text-primary/80">
-                  hello@corebot.in
-                </a>
+        <Reveal>
+          <div className="grid gap-12 md:grid-cols-2">
+            <div>
+              <p className="mb-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                05 / Contact
               </p>
+              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+                Tell us what&apos;s slowing you down
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                Fill this in and we&apos;ll reply within one business day.
+              </p>
+              <div className="mt-8 space-y-3 text-sm">
+                <p className="text-muted-foreground">
+                  Or email us directly at{" "}
+                  <a href="mailto:hello@corebot.in" className="text-primary transition-colors hover:text-primary/80">
+                    hello@corebot.in
+                  </a>
+                </p>
+              </div>
             </div>
-          </div>
 
-          <form className="space-y-4">
-            <div>
-              <label htmlFor="name" className="mb-1.5 block text-sm font-medium">Name</label>
-              <input
-                id="name"
-                type="text"
-                required
-                className="w-full rounded-lg border border-border bg-card px-4 py-2.5 text-sm outline-none transition-colors focus:border-primary"
-                placeholder="Your name"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="mb-1.5 block text-sm font-medium">Email</label>
-              <input
-                id="email"
-                type="email"
-                required
-                className="w-full rounded-lg border border-border bg-card px-4 py-2.5 text-sm outline-none transition-colors focus:border-primary"
-                placeholder="you@company.com"
-              />
-            </div>
-            <div>
-              <label htmlFor="business" className="mb-1.5 block text-sm font-medium">
-                Business name <span className="text-muted-foreground">(optional)</span>
-              </label>
-              <input
-                id="business"
-                type="text"
-                className="w-full rounded-lg border border-border bg-card px-4 py-2.5 text-sm outline-none transition-colors focus:border-primary"
-                placeholder="Your business"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="mb-1.5 block text-sm font-medium">
-                What do you want to automate?
-              </label>
-              <textarea
-                id="message"
-                rows={4}
-                required
-                className="w-full resize-none rounded-lg border border-border bg-card px-4 py-2.5 text-sm outline-none transition-colors focus:border-primary"
-                placeholder="Tell us about the repetitive work you want to eliminate..."
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-            >
-              Send message
-            </button>
-          </form>
-        </div>
+            <ContactForm />
+          </div>
+        </Reveal>
       </section>
 
       {/* ── FOOTER ─────────────────────────────────── */}
