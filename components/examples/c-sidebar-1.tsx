@@ -345,7 +345,6 @@ function WorkspaceNav() {
               <SidebarMenuItem key={item.id}>
                 <SidebarMenuButton
                   render={<Link href={item.href} />}
-                  nativeButton={false}
                   isActive={isActive}
                 >
                   {item.icon}
@@ -389,7 +388,6 @@ function ProjectNav() {
               <SidebarMenuItem key={project.id}>
                 <SidebarMenuButton
                   render={<Link href={project.href} />}
-                  nativeButton={false}
                   isActive={isActive}
                 >
                   <FolderIcon aria-hidden="true" />
