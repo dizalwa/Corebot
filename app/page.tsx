@@ -8,20 +8,13 @@ export default function Home() {
       {/* ── NAVBAR ─────────────────────────────────── */}
       <nav className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-          <a href="/" className="flex items-center gap-2.5">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-              <polygon
-                points="16,3 27,9.5 27,22.5 16,29 5,22.5 5,9.5"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinejoin="round"
-                className="text-primary"
-              />
-              <circle cx="16" cy="16" r="3" className="fill-primary" />
+          <a href="/" className="flex items-center gap-1">
+            <svg width="32" height="32" viewBox="4 4 48 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path fill="#4F46E5" d="M32 6C17.6 6 6 17.6 6 32s11.6 26 26 26c2.4 0 4.8-.3 7-1v-9.2c-2.2.8-4.5 1.2-7 1.2-9.4 0-17-7.6-17-17s7.6-17 17-17c2.5 0 4.8.5 7 1.2V7c-2.2-.7-4.6-1-7-1z"/>
+              <circle cx="40" cy="32" r="6" fill="#4F46E5"/>
             </svg>
-            <span className="text-base font-semibold tracking-tight">
-              <span className="font-bold">CORE</span>
-              <span className="font-normal">BOT</span>
+            <span className="-ml-1.5 text-xl font-semibold tracking-tight">
+              Core<span className="text-[#4F46E5]">Bot</span>
             </span>
           </a>
 
@@ -61,7 +54,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Corebot builds custom AI automations for small and mid-sized businesses — so your team stops doing repetitive tasks and starts doing the work that actually grows revenue.
+            CoreBot builds custom AI automations for small and mid-sized businesses — so your team stops doing repetitive tasks and starts doing the work that actually grows revenue.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -364,20 +357,13 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 py-12">
           <div className="grid gap-10 md:grid-cols-4">
             <div className="md:col-span-1">
-              <div className="flex items-center gap-2.5">
-                <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
-                  <polygon
-                    points="16,3 27,9.5 27,22.5 16,29 5,22.5 5,9.5"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinejoin="round"
-                    className="text-primary"
-                  />
-                  <circle cx="16" cy="16" r="3" className="fill-primary" />
+              <div className="flex items-center gap-1">
+                <svg width="28" height="28" viewBox="4 4 48 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path fill="#4F46E5" d="M32 6C17.6 6 6 17.6 6 32s11.6 26 26 26c2.4 0 4.8-.3 7-1v-9.2c-2.2.8-4.5 1.2-7 1.2-9.4 0-17-7.6-17-17s7.6-17 17-17c2.5 0 4.8.5 7 1.2V7c-2.2-.7-4.6-1-7-1z"/>
+                  <circle cx="40" cy="32" r="6" fill="#4F46E5"/>
                 </svg>
-                <span className="text-base font-semibold tracking-tight">
-                  <span className="font-bold">CORE</span>
-                  <span className="font-normal">BOT</span>
+                <span className="-ml-1.5 text-xl font-semibold tracking-tight">
+                  Core<span className="text-[#4F46E5]">Bot</span>
                 </span>
               </div>
               <p className="mt-3 text-sm text-muted-foreground">
@@ -414,7 +400,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 border-t border-border/60 pt-6 text-center text-xs text-muted-foreground">
-            © 2026 Corebot Solutions. All rights reserved. Built in Jharkhand, India.
+            © 2026 CoreBot Solutions. All rights reserved. Built in Jharkhand, India.
           </div>
         </div>
       </footer>

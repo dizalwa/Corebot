@@ -20,11 +20,11 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Corebot — AI Automation Agency",
-    template: "%s · Corebot",
+    default: "CoreBot — AI Automation Agency",
+    template: "%s · CoreBot",
   },
   description:
-    "Corebot builds custom AI automations for small and mid-sized businesses — lead capture, internal ops, and AI assistants. No retainers. No lock-in. You own everything we build.",
+    "CoreBot builds custom AI automations for small and mid-sized businesses — lead capture, internal ops, and AI assistants. No retainers. No lock-in. You own everything we build.",
   keywords: [
     "AI automation",
     "automation agency",
@@ -35,21 +35,21 @@ export const metadata: Metadata = {
     "business automation",
     "India automation agency",
   ],
-  authors: [{ name: "Corebot" }],
-  creator: "Corebot",
+  authors: [{ name: "CoreBot" }],
+  creator: "CoreBot",
   metadataBase: new URL("https://corebot.in"),
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://corebot.in",
-    siteName: "Corebot",
-    title: "Corebot — AI Automation Agency",
+    siteName: "CoreBot",
+    title: "CoreBot — AI Automation Agency",
     description:
       "Custom AI automations for small and mid-sized businesses. Lead capture, internal ops, and AI assistants — built in days, not months.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Corebot — AI Automation Agency",
+    title: "CoreBot — AI Automation Agency",
     description:
       "Custom AI automations for small and mid-sized businesses. No retainers. No lock-in.",
   },
