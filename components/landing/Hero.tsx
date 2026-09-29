@@ -64,10 +64,15 @@ export default function Hero() {
   }, [isPlaying])
 
   return (
-    <section className="relative overflow-hidden border-b border-border/80 bg-gradient-to-b from-background via-background to-secondary/30 pt-16 pb-20 md:pt-24 md:pb-28">
+    <section className="relative overflow-hidden border-b border-border/80 bg-background pt-16 pb-20 md:pt-24 md:pb-28">
+      {/* Subtle blue radial glow behind hero content */}
+      <div
+        className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[520px] rounded-full bg-primary/[0.035] blur-3xl -z-10"
+        aria-hidden="true"
+      />
       {/* Subtle background grid pattern */}
       <div
-        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.03]"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.025]"
         style={{
           backgroundImage:
             "radial-gradient(#0F172A 1px, transparent 1px), radial-gradient(#0F172A 1px, transparent 1px)",

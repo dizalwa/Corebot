@@ -12,26 +12,30 @@ export default function Navbar() {
         {/* Brand Logo */}
         <a
           href="/"
-          className="flex items-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-md"
+          className="flex items-center gap-1 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-md"
           aria-label="CoreBot Home"
         >
           <svg
             width="30"
             height="30"
-            viewBox="4 4 48 56"
+            viewBox="0 0 64 64"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             className="text-primary shrink-0"
           >
             <path
+              d="M50 8H26L12 32L26 56H50V44H33L26 32L33 20H50V8Z"
               fill="currentColor"
-              d="M32 6C17.6 6 6 17.6 6 32s11.6 26 26 26c2.4 0 4.8-.3 7-1v-9.2c-2.2.8-4.5 1.2-7 1.2-9.4 0-17-7.6-17-17s7.6-17 17-17c2.5 0 4.8.5 7 1.2V7c-2.2-.7-4.6-1-7-1z"
             />
-            <circle cx="40" cy="32" r="6" fill="currentColor" />
+            <circle cx="45" cy="32" r="5.5" fill="currentColor" />
           </svg>
           <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tight text-foreground">
+            <span className="text-xl font-bold tracking-tight leading-tight text-foreground">
               Core<span className="text-primary">Bot</span>
+            </span>
+            <span className="text-[8.5px] font-semibold tracking-wider text-muted-foreground uppercase leading-none">
+              AUTOMATE • GROW • FOCUS
             </span>
           </div>
         </a>

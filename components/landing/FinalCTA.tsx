@@ -4,7 +4,7 @@ import { MessageSquare, Mail, MapPin, CheckCircle2 } from "lucide-react"
 
 export default function FinalCTA() {
   return (
-    <section id="contact" className="border-b border-border/80 bg-background py-20 md:py-24">
+    <section id="contact" className="border-b border-border/80 bg-secondary py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
           {/* Left Column: Direct Invitation & Contact Context */}
@@ -57,7 +57,7 @@ export default function FinalCTA() {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="size-4 text-slate-500 shrink-0" />
-                <span>Operating from Jharkhand, India</span>
+                <span>Operating from Ranchi, Jharkhand, India</span>
               </div>
             </div>
           </div>

@@ -66,13 +66,13 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "CoreBot",
-  alternateName: "Corebot Solutions",
   url: "https://corebot.in",
   logo: "https://corebot.in/icon.svg",
   description:
     "CoreBot builds practical AI automations for businesses, helping automate repetitive tasks, customer communication, lead follow-ups and everyday workflows.",
   address: {
     "@type": "PostalAddress",
+    addressLocality: "Ranchi",
     addressRegion: "Jharkhand",
     addressCountry: "IN",
   },

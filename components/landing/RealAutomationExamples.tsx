@@ -49,7 +49,7 @@ const WORKFLOW_EXAMPLES = [
 
 export default function RealAutomationExamples() {
   return (
-    <section id="use-cases" className="border-b border-border/80 bg-background py-20 md:py-24">
+    <section id="use-cases" className="border-b border-border/80 bg-secondary py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl">
           <p className="text-xs font-mono font-semibold uppercase tracking-wider text-primary">

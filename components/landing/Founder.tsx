@@ -1,9 +1,10 @@
 import * as React from "react"
+import Image from "next/image"
 import { Mail, MessageSquare, MapPin } from "lucide-react"
 
 export default function Founder() {
   return (
-    <section className="border-b border-border/80 bg-background py-20 md:py-24">
+    <section className="border-b border-border/80 bg-secondary py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="rounded-2xl border border-border/90 bg-card p-8 sm:p-10 shadow-2xs">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
@@ -31,7 +32,7 @@ export default function Founder() {
               <div className="pt-4 flex flex-wrap items-center gap-4 text-xs font-medium text-slate-700">
                 <div className="flex items-center gap-1.5">
                   <MapPin className="size-4 text-slate-500" />
-                  <span>Based in Jharkhand, India</span>
+                  <span>Based in Ranchi, Jharkhand, India</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <Mail className="size-4 text-slate-500" />
@@ -46,9 +47,16 @@ export default function Founder() {
             </div>
 
             {/* Right Column: Founder Badge Card */}
-            <div className="lg:col-span-4 rounded-xl border border-border/80 bg-secondary/30 p-6 text-center space-y-3">
-              <div className="mx-auto flex size-20 items-center justify-center rounded-full bg-primary/10 border border-primary/20 text-xl font-bold text-primary font-mono">
-                VK
+            <div className="lg:col-span-4 rounded-xl border border-border/80 bg-secondary/40 p-6 text-center space-y-3">
+              <div className="relative mx-auto size-20 sm:size-24 overflow-hidden rounded-full border border-border/80 shadow-xs">
+                <Image
+                  src="/founder.png"
+                  alt="Vipul Kumar, Founder of CoreBot"
+                  width={96}
+                  height={96}
+                  className="size-full object-cover object-[50%_25%]"
+                  priority
+                />
               </div>
               <div>
                 <h3 className="text-lg font-bold text-foreground">
@@ -59,7 +67,7 @@ export default function Founder() {
                 </p>
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                Focused on designing resilient automation architectures for Indian and global growing enterprises.
+                Helping growing businesses identify and automate repetitive work with practical AI.
               </p>
               <div className="pt-2">
                 <a

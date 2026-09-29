@@ -8,24 +8,30 @@ export default function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           {/* Brand Info */}
           <div className="md:col-span-2 space-y-3">
-            <a href="/" className="flex items-center gap-2" aria-label="CoreBot Home">
+            <a href="/" className="flex items-center gap-1" aria-label="CoreBot Home">
               <svg
                 width="28"
                 height="28"
-                viewBox="4 4 48 56"
+                viewBox="0 0 64 64"
+                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
                 className="text-primary shrink-0"
               >
                 <path
+                  d="M50 8H26L12 32L26 56H50V44H33L26 32L33 20H50V8Z"
                   fill="currentColor"
-                  d="M32 6C17.6 6 6 17.6 6 32s11.6 26 26 26c2.4 0 4.8-.3 7-1v-9.2c-2.2.8-4.5 1.2-7 1.2-9.4 0-17-7.6-17-17s7.6-17 17-17c2.5 0 4.8.5 7 1.2V7c-2.2-.7-4.6-1-7-1z"
                 />
-                <circle cx="40" cy="32" r="6" fill="currentColor" />
+                <circle cx="45" cy="32" r="5.5" fill="currentColor" />
               </svg>
-              <span className="text-xl font-bold tracking-tight text-foreground">
-                Core<span className="text-primary">Bot</span>
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold tracking-tight leading-tight text-foreground">
+                  Core<span className="text-primary">Bot</span>
+                </span>
+                <span className="text-[8.5px] font-semibold tracking-wider text-muted-foreground uppercase leading-none">
+                  AUTOMATE • GROW • FOCUS
+                </span>
+              </div>
             </a>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
               Practical AI automation for growing businesses. Helping SMEs turn repetitive manual processes into clean, automated workflows.
@@ -118,7 +124,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-1.5 text-xs text-muted-foreground">
                 <MapPin className="size-3.5 text-slate-400" />
-                <span>Jharkhand, India</span>
+                <span>Ranchi, Jharkhand, India</span>
               </li>
             </ul>
           </div>
@@ -126,7 +132,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-12 border-t border-border/70 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} CoreBot Solutions. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} CoreBot. All rights reserved.</p>
           <div className="flex items-center gap-5">
             <a href="#contact" className="hover:text-foreground">
               Contact
