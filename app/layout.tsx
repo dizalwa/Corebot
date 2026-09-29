@@ -20,42 +20,66 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "CoreBot — AI Automation Agency",
+    default: "CoreBot | Practical AI Automation for Growing Businesses",
     template: "%s · CoreBot",
   },
   description:
-    "CoreBot builds custom AI automations for small and mid-sized businesses — lead capture, internal ops, and AI assistants. No retainers. No lock-in. You own everything we build.",
+    "CoreBot builds practical AI automations for businesses, helping automate repetitive tasks, customer communication, lead follow-ups and everyday workflows.",
   keywords: [
     "AI automation",
-    "automation agency",
-    "n8n",
-    "Make",
-    "Zapier",
-    "AI chatbots",
     "business automation",
-    "India automation agency",
+    "workflow automation",
+    "SME automation",
+    "WhatsApp automation",
+    "lead automation",
+    "custom AI workflows",
+    "practical AI",
   ],
-  authors: [{ name: "CoreBot" }],
+  authors: [{ name: "CoreBot", url: "https://corebot.in" }],
   creator: "CoreBot",
   metadataBase: new URL("https://corebot.in"),
+  alternates: {
+    canonical: "https://corebot.in",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://corebot.in",
     siteName: "CoreBot",
-    title: "CoreBot — AI Automation Agency",
+    title: "CoreBot | Practical AI Automation for Growing Businesses",
     description:
-      "Custom AI automations for small and mid-sized businesses. Lead capture, internal ops, and AI assistants — built in days, not months.",
+      "CoreBot builds practical AI automations for businesses, helping automate repetitive tasks, customer communication, lead follow-ups and everyday workflows.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "CoreBot — AI Automation Agency",
+    title: "CoreBot | Practical AI Automation for Growing Businesses",
     description:
-      "Custom AI automations for small and mid-sized businesses. No retainers. No lock-in.",
+      "CoreBot builds practical AI automations for businesses, helping automate repetitive tasks, customer communication, lead follow-ups and everyday workflows.",
   },
   robots: {
     index: true,
     follow: true,
+  },
+}
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "CoreBot",
+  alternateName: "Corebot Solutions",
+  url: "https://corebot.in",
+  logo: "https://corebot.in/icon.svg",
+  description:
+    "CoreBot builds practical AI automations for businesses, helping automate repetitive tasks, customer communication, lead follow-ups and everyday workflows.",
+  address: {
+    "@type": "PostalAddress",
+    addressRegion: "Jharkhand",
+    addressCountry: "IN",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "hellocorebot@gmail.com",
+    contactType: "customer service",
   },
 }
 
@@ -68,8 +92,14 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("dark", "antialiased", jetbrainsMono.variable, inter.variable)}
+      className={cn("antialiased", jetbrainsMono.variable, inter.variable)}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>
         <ThemeProvider>
           <TooltipProvider>{children}</TooltipProvider>
