@@ -1,67 +1,52 @@
 "use client"
 
 import * as React from "react"
-import { ArrowRight, MessageSquare, Play, RotateCcw, CheckCircle2, Clock, Sparkles } from "lucide-react"
+import { ArrowRight, MessageSquare, CheckCircle2, ChevronDown } from "lucide-react"
 
-const WORKFLOW_STEPS = [
+const BUSINESS_STEPS = [
   {
     id: 1,
-    title: "New Customer Enquiry",
-    source: "WhatsApp & Website Form",
-    status: "Captured",
-    time: "0.0s",
+    label: "New Enquiry",
+    description: "A customer reaches out to your business",
+    icon: "📩",
   },
   {
     id: 2,
-    title: "AI Processes Request",
-    source: "Extracts service, budget, intent",
-    status: "Parsed",
-    time: "+0.4s",
+    label: "Instant Reply",
+    description: "Customer gets an immediate response",
+    icon: "💬",
   },
   {
     id: 3,
-    title: "Lead Details Recorded",
-    source: "Synced to CRM & Google Sheets",
-    status: "Saved",
-    time: "+0.7s",
+    label: "Customer Details Saved",
+    description: "Name, number and requirement are recorded",
+    icon: "📋",
   },
   {
     id: 4,
-    title: "Instant Response Sent",
-    source: "Personalized WhatsApp reply",
-    status: "Delivered",
-    time: "+1.2s",
+    label: "Follow-Up Reminder",
+    description: "A reminder is created so nothing is missed",
+    icon: "🔔",
   },
   {
     id: 5,
-    title: "Follow-Up Scheduled",
-    source: "Reminder set in 24h if no reply",
-    status: "Queued",
-    time: "+1.5s",
-  },
-  {
-    id: 6,
-    title: "Sales Team Notified",
-    source: "Slack & WhatsApp group alert",
-    status: "Notified",
-    time: "+1.8s",
+    label: "Team Notified",
+    description: "The right person on your team is informed",
+    icon: "👤",
   },
 ]
 
 export default function Hero() {
-  const [activeStep, setActiveStep] = React.useState(2)
-  const [isPlaying, setIsPlaying] = React.useState(true)
+  const [activeStep, setActiveStep] = React.useState(0)
 
-  // Step progression animation loop
+  // Simple step progression animation
   React.useEffect(() => {
-    if (!isPlaying) return
-
     const interval = setInterval(() => {
-      setActiveStep((prev) => (prev >= WORKFLOW_STEPS.length - 1 ? 0 : prev + 1))
-    }, 2400)
+      setActiveStep((prev) => (prev >= BUSINESS_STEPS.length - 1 ? 0 : prev + 1))
+    }, 2600)
 
     return () => clearInterval(interval)
-  }, [isPlaying])
+  }, [])
 
   return (
     <section className="relative overflow-hidden border-b border-border/80 bg-background pt-16 pb-20 md:pt-24 md:pb-28">
@@ -96,8 +81,9 @@ export default function Hero() {
             </h1>
 
             <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              CoreBot builds practical AI-powered workflows that automate repetitive tasks, follow-ups,
-              customer communication and everyday business operations.
+              CoreBot helps businesses reduce repetitive follow-ups, customer communication,
+              data entry and routine work — so your team can spend more time on the work that
+              actually grows the business.
             </p>
 
             {/* CTAs */}
@@ -121,137 +107,95 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Value Indicators */}
-            <div className="pt-4 border-t border-border/80 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-y-2 sm:gap-x-6 text-xs text-muted-foreground font-medium">
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="size-4 text-emerald-600" />
-                <span>Clear One-Time Pricing</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="size-4 text-emerald-600" />
-                <span>You Own Everything We Build</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="size-4 text-emerald-600" />
-                <span>Built For Your Existing Tools</span>
-              </div>
-            </div>
+            {/* Trust Line */}
+            <p className="text-xs text-muted-foreground font-medium pt-1">
+              Based in Ranchi · Built for Indian SMEs · Start with one process
+            </p>
           </div>
 
-          {/* Right Column: Interactive Workflow Visualizer */}
+          {/* Right Column: Simple Business Scenario Visual */}
           <div className="lg:col-span-5">
             <div className="relative rounded-2xl border border-border/90 bg-card p-5 sm:p-6 shadow-sm">
-              {/* Visualizer Header */}
-              <div className="flex items-center justify-between pb-4 border-b border-border/70">
-                <div className="flex items-center gap-2.5">
-                  <div className="flex gap-1.5" aria-hidden="true">
-                    <span className="size-2.5 rounded-full bg-slate-300" />
-                    <span className="size-2.5 rounded-full bg-slate-300" />
-                    <span className="size-2.5 rounded-full bg-slate-300" />
-                  </div>
-                  <span className="font-mono text-xs font-semibold text-foreground">
-                    live_inbound_pipeline.flow
-                  </span>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <span className="inline-flex items-center gap-1 rounded-md bg-emerald-50 px-2 py-0.5 font-mono text-[11px] font-medium text-emerald-700 border border-emerald-200">
-                    <span className="size-1.5 rounded-full bg-emerald-500 animate-ping" />
-                    ACTIVE
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => setIsPlaying(!isPlaying)}
-                    className="rounded p-1 text-muted-foreground hover:bg-secondary hover:text-foreground"
-                    title={isPlaying ? "Pause simulation" : "Play simulation"}
-                    aria-label={isPlaying ? "Pause workflow simulation" : "Resume workflow simulation"}
-                  >
-                    {isPlaying ? <Clock className="size-3.5" /> : <Play className="size-3.5" />}
-                  </button>
-                </div>
+              {/* Header */}
+              <div className="pb-4 border-b border-border/70">
+                <p className="text-sm font-semibold text-foreground">
+                  What happens when a new customer enquires
+                </p>
+                <p className="text-xs text-muted-foreground mt-0.5">
+                  Handled automatically — with less manual work for your team
+                </p>
               </div>
 
-              {/* Progress Stepper Nodes */}
-              <div className="mt-4 space-y-2.5" role="region" aria-label="Live automation workflow progression">
-                {WORKFLOW_STEPS.map((step, idx) => {
-                  const isCurrent = idx === activeStep
-                  const isPassed = idx < activeStep
+              {/* Business Process Steps */}
+              <div className="mt-5 space-y-0" role="region" aria-label="Business automation process">
+                {BUSINESS_STEPS.map((step, idx) => {
+                  const isActive = idx === activeStep
+                  const isCompleted = idx < activeStep
 
                   return (
-                    <div
-                      key={step.id}
-                      onClick={() => {
-                        setActiveStep(idx)
-                        setIsPlaying(false)
-                      }}
-                      className={`group relative flex cursor-pointer items-start justify-between rounded-xl border p-2.5 sm:p-3 transition-all ${
-                        isCurrent
-                          ? "border-primary/80 bg-indigo-50/50 shadow-xs ring-1 ring-primary/30"
-                          : isPassed
-                            ? "border-border/60 bg-card/60 opacity-85"
-                            : "border-border/40 bg-secondary/20 opacity-50"
-                      }`}
-                    >
-                      <div className="flex items-start gap-3">
+                    <React.Fragment key={step.id}>
+                      {/* Step Card */}
+                      <div
+                        className={`relative flex items-center gap-3.5 rounded-xl border p-3 transition-all duration-300 ${
+                          isActive
+                            ? "border-primary/70 bg-indigo-50/50 shadow-xs ring-1 ring-primary/20"
+                            : isCompleted
+                              ? "border-border/60 bg-card/80"
+                              : "border-border/40 bg-secondary/20 opacity-60"
+                        }`}
+                      >
+                        {/* Step Icon */}
                         <div
-                          className={`mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full text-xs font-bold font-mono transition-colors ${
-                            isCurrent
-                              ? "bg-primary text-primary-foreground"
-                              : isPassed
-                                ? "bg-emerald-100 text-emerald-700"
-                                : "bg-slate-100 text-slate-500"
+                          className={`flex size-9 shrink-0 items-center justify-center rounded-lg text-base transition-colors ${
+                            isActive
+                              ? "bg-primary/10"
+                              : isCompleted
+                                ? "bg-emerald-50"
+                                : "bg-slate-50"
                           }`}
                         >
-                          {isPassed ? "✓" : idx + 1}
+                          {isCompleted ? (
+                            <CheckCircle2 className="size-4.5 text-emerald-600" />
+                          ) : (
+                            <span>{step.icon}</span>
+                          )}
                         </div>
-                        <div>
-                          <p className="text-xs sm:text-sm font-semibold text-foreground">
-                            {step.title}
+
+                        {/* Step Content */}
+                        <div className="min-w-0">
+                          <p className="text-[13px] sm:text-sm font-semibold text-foreground leading-tight">
+                            {step.label}
                           </p>
-                          <p className="text-[11px] sm:text-xs text-muted-foreground">
-                            {step.source}
+                          <p className="text-[11px] sm:text-xs text-muted-foreground mt-0.5 leading-snug">
+                            {step.description}
                           </p>
                         </div>
                       </div>
 
-                      <div className="text-right shrink-0">
-                        <span
-                          className={`inline-block rounded px-1.5 py-0.5 font-mono text-[10px] font-medium ${
-                            isCurrent
-                              ? "bg-primary/10 text-primary"
-                              : isPassed
-                                ? "bg-emerald-50 text-emerald-700"
-                                : "text-slate-400"
-                          }`}
-                        >
-                          {step.status}
-                        </span>
-                        <p className="font-mono text-[10px] text-muted-foreground mt-0.5">
-                          {step.time}
-                        </p>
-                      </div>
-                    </div>
+                      {/* Connector Arrow between steps */}
+                      {idx < BUSINESS_STEPS.length - 1 && (
+                        <div className="flex justify-center py-1">
+                          <ChevronDown
+                            className={`size-4 transition-colors duration-300 ${
+                              idx < activeStep
+                                ? "text-emerald-400"
+                                : idx === activeStep
+                                  ? "text-primary/60"
+                                  : "text-slate-300"
+                            }`}
+                          />
+                        </div>
+                      )}
+                    </React.Fragment>
                   )
                 })}
               </div>
 
-              {/* Visualizer Footer */}
-              <div className="mt-4 pt-3 border-t border-border/70 flex items-center justify-between text-xs text-muted-foreground">
-                <span className="flex items-center gap-1 font-mono text-[11px]">
-                  <Sparkles className="size-3 text-primary" />
-                  Simulated workflow progression
-                </span>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setActiveStep(0)
-                    setIsPlaying(true)
-                  }}
-                  className="flex items-center gap-1 text-[11px] font-medium text-primary hover:underline"
-                >
-                  <RotateCcw className="size-3" />
-                  Replay Run
-                </button>
+              {/* Footer note */}
+              <div className="mt-4 pt-3 border-t border-border/70">
+                <p className="text-[11px] text-muted-foreground text-center">
+                  The routine work is handled automatically, so your team can focus on customers.
+                </p>
               </div>
             </div>
           </div>

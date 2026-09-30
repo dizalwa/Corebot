@@ -3,8 +3,6 @@ import {
   Stethoscope,
   Building2,
   GraduationCap,
-  Briefcase,
-  Car,
   Layers,
   ArrowRight,
 } from "lucide-react"
@@ -13,72 +11,32 @@ const INDUSTRIES = [
   {
     icon: Stethoscope,
     title: "Diagnostic Centres & Labs",
-    examples: [
-      "Test booking & home sample dispatch",
-      "Automated test preparation instructions",
-      "WhatsApp test report delivery notifications",
-      "Doctor referral logging & reconciliation",
-    ],
+    description:
+      "Automate routine patient communication, reminders and report notifications.",
   },
   {
     icon: Stethoscope,
     title: "Clinics & Healthcare Practices",
-    examples: [
-      "Patient appointment booking & calendar sync",
-      "24h & 2h automated appointment reminders",
-      "Post-consultation medication instructions",
-      "Follow-up visit scheduling alerts",
-    ],
+    description:
+      "Reduce repetitive appointment messages, reminders and routine follow-ups.",
   },
   {
     icon: Building2,
-    title: "Real Estate & Agencies",
-    examples: [
-      "Immediate qualification of ad inquiries",
-      "Site visit scheduling with sales rep routing",
-      "Brochure and floor plan dispatch via WhatsApp",
-      "Long-term automated buyer check-ins",
-    ],
+    title: "Real Estate & Property Businesses",
+    description:
+      "Respond to enquiries, capture requirements and keep follow-ups organised.",
   },
   {
     icon: GraduationCap,
     title: "Coaching & Education Institutes",
-    examples: [
-      "Course enquiry handling & brochure dispatch",
-      "Demo class registration & Zoom link delivery",
-      "Fee installment reminders & receipt generation",
-      "Automated counseling appointment scheduling",
-    ],
-  },
-  {
-    icon: Briefcase,
-    title: "Professional Services & CAs",
-    examples: [
-      "Client onboarding & document collection",
-      "GST/tax filing deadline reminder sequences",
-      "Automated recurring invoice generation",
-      "Consultation booking & intake questionnaire",
-    ],
-  },
-  {
-    icon: Car,
-    title: "Automotive & Dealerships",
-    examples: [
-      "Test drive booking & verification",
-      "Service & maintenance interval reminders",
-      "Vehicle delivery status notifications",
-      "Post-service customer satisfaction surveys",
-    ],
+    description:
+      "Handle routine student enquiries, information sharing and follow-ups.",
   },
   {
     icon: Layers,
     title: "Other Growing Businesses",
-    examples: [
-      "E-commerce order notifications & tracking",
-      "Multi-sheet reconciliation & reporting",
-      "Vendor invoice processing & approvals",
-      "Internal team task dispatch via WhatsApp/Slack",
-    ],
+    description:
+      "If your team repeatedly does the same task, we can explore whether it can be simplified or automated.",
   },
 ]
 
@@ -91,23 +49,26 @@ export default function WhoWeHelp() {
             Target Businesses
           </p>
           <h2 className="mt-2 text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
-            If your business runs on repetitive processes, CoreBot can help.
+            Who Can CoreBot Help?
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            We work across diverse service, retail, and operational businesses.
-            If your daily work involves repeating the same steps across messaging, files, and tools, automation fits your workflow.
+            CoreBot is useful wherever your team spends time repeating the same follow-ups, messages, data entry or routine tasks.
           </p>
         </div>
 
-        {/* 7 Industry Cards */}
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {/* 5 Industry Cards */}
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-6">
           {INDUSTRIES.map((ind, idx) => {
             const Icon = ind.icon
             return (
               <div
                 key={idx}
                 className={`flex flex-col justify-between rounded-xl border border-border/80 bg-card p-6 shadow-2xs transition-all hover:border-slate-300 hover:shadow-xs ${
-                  idx === 6 ? "lg:col-span-3" : ""
+                  idx === 3
+                    ? "lg:col-span-2 lg:col-start-2"
+                    : idx === 4
+                    ? "sm:col-span-2 sm:max-w-md sm:mx-auto w-full lg:max-w-none lg:mx-0 lg:col-span-2"
+                    : "lg:col-span-2"
                 }`}
               >
                 <div>
@@ -120,14 +81,9 @@ export default function WhoWeHelp() {
                     </h3>
                   </div>
 
-                  <ul className="mt-4 space-y-2 text-xs sm:text-sm text-muted-foreground">
-                    {ind.examples.map((ex, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="text-primary font-bold">•</span>
-                        <span>{ex}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                    {ind.description}
+                  </p>
                 </div>
 
                 <div className="mt-6 pt-3 border-t border-border/60">
@@ -146,7 +102,7 @@ export default function WhoWeHelp() {
 
         {/* Reassurance note */}
         <p className="mt-8 text-center text-xs text-muted-foreground">
-          Don&apos;t see your industry above? If your team uses WhatsApp, email, spreadsheets, or web forms, we can build custom workflows for your operations.
+          Don&apos;t see your industry above? CoreBot can help businesses where staff spend significant time on repetitive customer communication, follow-ups and routine office work.
         </p>
       </div>
     </section>

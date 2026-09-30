@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Calculator, ArrowRight, Info } from "lucide-react"
+import { ArrowRight, Info } from "lucide-react"
 
 export default function AutomationCalculator() {
   const [people, setPeople] = React.useState<number>(3)
@@ -21,11 +21,10 @@ export default function AutomationCalculator() {
             Interactive Assessment
           </p>
           <h2 className="mt-2 text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
-            How Much Repetitive Work Is Your Business Doing?
+            See How Much Time Your Team Spends on Repetitive Work
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Use this simple estimator to calculate the approximate staff time currently spent on
-            manual data entry, repetitive follow-ups, and copy-paste processes.
+            Estimate how many hours your team may be spending each month on routine tasks — and what that time could be worth.
           </p>
         </div>
 
@@ -36,7 +35,7 @@ export default function AutomationCalculator() {
               {/* Slider 1: People */}
               <div>
                 <div className="flex items-center justify-between text-sm font-semibold text-foreground">
-                  <label htmlFor="people-slider">People performing this task:</label>
+                  <label htmlFor="people-slider">How many people do this task?</label>
                   <span className="font-mono text-base font-bold text-primary">
                     {people} {people === 1 ? "person" : "people"}
                   </span>
@@ -60,7 +59,7 @@ export default function AutomationCalculator() {
               {/* Slider 2: Hours Per Week */}
               <div>
                 <div className="flex items-center justify-between text-sm font-semibold text-foreground">
-                  <label htmlFor="hours-slider">Hours spent per person each week:</label>
+                  <label htmlFor="hours-slider">How many hours per person each week?</label>
                   <span className="font-mono text-base font-bold text-primary">
                     {hoursPerWeek} hrs / week
                   </span>
@@ -84,7 +83,7 @@ export default function AutomationCalculator() {
               {/* Slider 3: Hourly Cost */}
               <div>
                 <div className="flex items-center justify-between text-sm font-semibold text-foreground">
-                  <label htmlFor="cost-slider">Approximate hourly employee cost:</label>
+                  <label htmlFor="cost-slider">Approximate hourly staff cost?</label>
                   <span className="font-mono text-base font-bold text-primary">
                     ₹{hourlyCost} / hr
                   </span>
@@ -111,31 +110,36 @@ export default function AutomationCalculator() {
             <div className="lg:col-span-5 rounded-xl border border-border/80 bg-secondary/40 p-6 flex flex-col justify-between">
               <div className="space-y-4">
                 <span className="font-mono text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-                  Estimated Operational Allocation
+                  Estimated Monthly Time
                 </span>
 
                 <div className="pt-2">
-                  <p className="text-xs text-muted-foreground">Estimated Monthly Manual Hours:</p>
-                  <p className="font-sans font-bold tabular-nums text-3xl sm:text-4xl text-foreground">
-                    ~{monthlyHours} hrs<span className="text-sm font-normal text-muted-foreground">/mo</span>
+                  <p className="text-sm sm:text-base leading-relaxed text-foreground">
+                    Your team may be spending about{" "}
+                    <span className="font-bold tabular-nums text-2xl sm:text-3xl text-foreground">
+                      ~{monthlyHours} hours
+                    </span>{" "}
+                    a month on this task.
                   </p>
                 </div>
 
-                <div className="pt-2 border-t border-border/60">
-                  <p className="text-xs text-muted-foreground">Approximate Monthly Time Value:</p>
-                  <p className="font-sans font-bold tabular-nums text-2xl sm:text-3xl text-primary">
-                    ~₹{monthlyCost.toLocaleString("en-IN")}
+                <div className="pt-3 border-t border-border/60">
+                  <p className="text-sm sm:text-base leading-relaxed text-foreground">
+                    That is roughly{" "}
+                    <span className="font-bold tabular-nums text-2xl sm:text-3xl text-primary">
+                      ₹{monthlyCost.toLocaleString("en-IN")}
+                    </span>{" "}
+                    of staff time each month.
                   </p>
                 </div>
 
                 <div className="rounded-lg bg-indigo-50/70 p-3 border border-indigo-100 text-xs text-slate-700 space-y-1">
                   <div className="flex items-center gap-1.5 font-semibold text-primary">
-                    <Info className="size-3.5" />
-                    <span>Candidate for Automation</span>
+                    <Info className="size-3.5 shrink-0" />
+                    <span>This may be worth automating.</span>
                   </div>
-                  <p className="text-[11px] leading-relaxed">
-                    If your team spends significant time on this task, it may be a strong candidate
-                    for a practical automated workflow.
+                  <p className="text-[11px] leading-relaxed text-muted-foreground">
+                    Not every task should be automated. This estimate simply helps you identify repetitive work that may be worth looking at.
                   </p>
                 </div>
               </div>
@@ -153,8 +157,8 @@ export default function AutomationCalculator() {
           </div>
 
           <p className="mt-6 text-center text-[11px] font-mono text-muted-foreground">
-            *ESTIMATE ONLY: Every business process is unique. These figures reflect estimated labor time
-            allocated to routine manual work and do not constitute a financial guarantee.
+            *ESTIMATE ONLY: Every business process is unique. These figures reflect estimated staff time
+            spent on routine manual work and do not constitute a financial guarantee.
           </p>
         </div>
       </div>

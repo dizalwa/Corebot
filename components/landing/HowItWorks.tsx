@@ -1,30 +1,30 @@
 import * as React from "react"
-import { Search, Hammer, KeyRound, ArrowRight } from "lucide-react"
+import { Search, Hammer, KeyRound } from "lucide-react"
 
 const STAGES = [
   {
     step: "01",
-    label: "DISCOVER",
+    label: "UNDERSTAND",
     icon: Search,
-    title: "Understand how the business currently works",
+    title: "Understand Your Work",
     description:
-      "We begin with a focused conversation to map your team's exact daily tasks, existing software, and manual bottlenecks. We identify where automation provides the highest operational relief.",
+      "We start by understanding what your team does today, where time is being lost, and which repetitive tasks are worth simplifying.",
   },
   {
     step: "02",
-    label: "BUILD",
+    label: "BUILD & TEST",
     icon: Hammer,
-    title: "Turn the repetitive process into an automated workflow",
+    title: "Build & Test",
     description:
-      "We design, build, and thoroughly test the automation using your actual tools and business scenarios. Everything is calibrated to handle edge cases, missing data, and error alerts smoothly.",
+      "We build the agreed solution and test it with your real business process before it is handed over.",
   },
   {
     step: "03",
-    label: "HANDOVER",
+    label: "HAND IT OVER",
     icon: KeyRound,
-    title: "Provide the workflow, documentation and guidance",
+    title: "Hand It Over",
     description:
-      "We hand over full ownership and credentials to your team. You receive plain-English documentation and training so your staff understands how to monitor and manage the new workflow.",
+      "You get a working solution, clear instructions and support so your team can use it confidently.",
   },
 ]
 
@@ -37,11 +37,10 @@ export default function HowItWorks() {
             Implementation Process
           </p>
           <h2 className="mt-2 text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
-            From manual process to automated workflow.
+            How It Works
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            No endless consulting presentations or theoretical slide decks. A direct, 3-stage journey
-            that transforms repetitive business routines into working automation.
+            We keep the process simple — understand the work, build the solution, and hand it over to you.
           </p>
         </div>
 

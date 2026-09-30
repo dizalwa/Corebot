@@ -10,23 +10,26 @@ export default function Founder() {
           <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
             {/* Left Column: Founder Profile Details */}
             <div className="lg:col-span-8 space-y-4">
-              <p className="text-xs font-mono font-semibold uppercase tracking-wider text-primary">
-                Leadership &amp; Accountability
+              <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+                Who&apos;s Behind CoreBot
               </p>
               <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
                 Built by someone who understands business operations.
               </h2>
 
               <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">
-                CoreBot was started with a simple observation: growing businesses lose far too much
-                time and mental energy to repetitive administrative chores—copying leads, answering
-                the same inquiries, updating sheets, and following up manually.
+                After years in banking and working closely with businesses, I saw how much time
+                teams spend on repetitive follow-ups, customer communication, data entry and
+                routine processes.
               </p>
 
               <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">
-                We believe practical automation shouldn&apos;t require enterprise budgets or complex IT departments.
-                By connecting existing tools with clean, sensible AI workflows, we help business owners
-                regain time to focus on actual customer service and revenue growth.
+                CoreBot was created to help businesses take that repetitive work off their
+                team&apos;s hands using practical automation — without making technology complicated.
+              </p>
+
+              <p className="text-sm font-medium text-foreground pt-1">
+                Business-first. Practical. Built for real-world SME operations.
               </p>
 
               <div className="pt-4 flex flex-wrap items-center gap-4 text-xs font-medium text-slate-700">
@@ -63,11 +66,11 @@ export default function Founder() {
                   Vipul Kumar
                 </h3>
                 <p className="text-xs font-medium text-primary">
-                  Founder, CoreBot
+                  Founder, CoreBot | Ex-Banker
                 </p>
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                Helping growing businesses identify and automate repetitive work with practical AI.
+                Helping growing businesses identify and automate repetitive work with practical automation.
               </p>
               <div className="pt-2">
                 <a

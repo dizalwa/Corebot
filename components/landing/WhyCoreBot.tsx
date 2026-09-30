@@ -1,34 +1,30 @@
 import * as React from "react"
 import { Target, Wrench, ShieldCheck, UserCheck } from "lucide-react"
 
-const DIFFERENTIATORS = [
+const PRINCIPLES = [
   {
     icon: Target,
-    title: "Business-first",
-    subtitle: "Start with the business problem.",
+    title: "Business First",
     description:
-      "We don't force complicated AI where simple automation rules work. Our priority is solving the operational bottleneck effectively, using the cleanest solution possible.",
+      "We start with the work your team actually does and the problem you want to solve — not with technology for its own sake.",
   },
   {
     icon: Wrench,
-    title: "Practical",
-    subtitle: "Automate processes where automation makes sense.",
+    title: "Practical, Not Complicated",
     description:
-      "Not every task should be automated. We help you isolate high-volume, error-prone friction points where automated execution delivers genuine day-to-day relief.",
+      "We focus on useful processes that save your team repetitive work without forcing you to learn complicated technology.",
   },
   {
     icon: ShieldCheck,
-    title: "Transparent",
-    subtitle: "Clear pricing and deliverables.",
+    title: "You Own What We Build",
     description:
-      "No open-ended consulting hourly fees or surprise retainers. Scope, costs, and deliverables are agreed upon upfront so you always know what you are paying for.",
+      "You receive the working solution and the information needed to use it. There is no unnecessary lock-in.",
   },
   {
     icon: UserCheck,
-    title: "Human control",
-    subtitle: "People remain in control of important business decisions.",
+    title: "People Stay in Control",
     description:
-      "Automation should support your team, not replace critical human discernment. Important exceptions, edge cases, and high-stakes choices are routed directly to your staff.",
+      "Automation handles routine work. Your team remains involved wherever judgement, approval or personal interaction is needed.",
   },
 ]
 
@@ -41,18 +37,17 @@ export default function WhyCoreBot() {
             Our Principles
           </p>
           <h2 className="mt-2 text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Built around your business, not around a technology stack.
+            Why Businesses Choose CoreBot
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Technology is only valuable when it solves a tangible problem without adding unnecessary complexity.
-            Here is how CoreBot approaches automation for growing businesses.
+            Practical automation should make your business simpler — not make technology another thing your team has to manage.
           </p>
         </div>
 
-        {/* 4 Differentiators */}
+        {/* 4 Principle Cards */}
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          {DIFFERENTIATORS.map((diff, idx) => {
-            const Icon = diff.icon
+          {PRINCIPLES.map((item, idx) => {
+            const Icon = item.icon
             return (
               <div
                 key={idx}
@@ -63,18 +58,13 @@ export default function WhyCoreBot() {
                     <div className="inline-flex size-10 items-center justify-center rounded-lg bg-indigo-50 text-primary">
                       <Icon className="size-5" />
                     </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-foreground">
-                        {diff.title}
-                      </h3>
-                      <p className="text-xs font-medium text-primary mt-0.5">
-                        {diff.subtitle}
-                      </p>
-                    </div>
+                    <h3 className="text-lg font-bold text-foreground">
+                      {item.title}
+                    </h3>
                   </div>
 
                   <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                    {diff.description}
+                    {item.description}
                   </p>
                 </div>
               </div>

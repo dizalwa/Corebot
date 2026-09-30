@@ -6,43 +6,35 @@ import { ChevronDown } from "lucide-react"
 const FAQS = [
   {
     q: "What exactly can CoreBot automate?",
-    a: "CoreBot automates repetitive business processes involving structured data and communication. Examples include capturing leads from ads/website, sending instant WhatsApp follow-ups, updating CRMs and Google Sheets, answering customer inquiries 24/7, routing support requests, and scheduling appointments.",
+    a: "CoreBot can automate repetitive work such as responding to enquiries, sending reminders, following up with customers, recording information, sending notifications, and moving information between the tools your team already uses.",
   },
   {
-    q: "Do I need to replace my existing software?",
-    a: "No. CoreBot connects directly to the tools your business already uses—such as WhatsApp, Google Sheets, Gmail, Notion, Airtable, Slack, HubSpot, or industry-specific software. You do not need to migrate or buy a completely new suite of tools.",
+    q: "Do I need to change the way my team works?",
+    a: "No. We start with the way your business already works and look for repetitive steps that can be simplified or automated. We only change what makes sense.",
   },
   {
-    q: "Can CoreBot automate WhatsApp?",
-    a: "Yes. Using the official WhatsApp Business API, we can build automated flows for instant lead responses, order confirmations, appointment reminders, and AI assistants capable of handling customer queries 24/7.",
+    q: "Will my team still be involved?",
+    a: "Yes. CoreBot handles routine work, while your team stays in control of decisions, approvals, customer conversations, and anything that needs human judgement.",
   },
   {
-    q: "What tools can CoreBot integrate with?",
-    a: "We integrate with any tool that has an API or webhook. Commonly connected systems include WhatsApp Business, Google Workspace (Sheets, Gmail, Drive), Airtable, Notion, Slack, HubSpot, Zoho, Razorpay, OpenAI, Claude, and custom database endpoints.",
+    q: "Will I need to buy new software?",
+    a: "Not necessarily. We first look at the tools you already use and see what can be connected. If a new tool is genuinely useful, we will explain why before adding it.",
   },
   {
-    q: "Do I need technical knowledge to manage this?",
-    a: "No. We build, test, and configure everything for you. When we hand over the workflow, we provide plain-English operational documentation and a clear walkthrough so non-technical staff can comfortably monitor day-to-day runs.",
+    q: "What happens if something goes wrong?",
+    a: "We test the automation before handing it over and provide support after launch. We also make sure your team knows what the automation is doing and what to do if attention is needed.",
   },
   {
-    q: "Who owns the automation?",
-    a: "You own 100% of the automation. All workflows, accounts, credentials, and API connections reside in your own accounts. CoreBot does not hold your workflows hostage, and there is no vendor lock-in.",
+    q: "Who owns the automation after it is built?",
+    a: "You do. The agreed automation and setup belong to your business. We do not want you to be unnecessarily locked into CoreBot.",
   },
   {
-    q: "What happens if an automation stops working?",
-    a: "We build workflows with error-logging and automated alert notifications (e.g. sending a warning to your designated WhatsApp or Slack channel if a third-party API has an issue). Every project includes 30 or 60 days of post-launch support to resolve any initial edge cases.",
+    q: "How much does automation cost?",
+    a: "Our Starter automation package begins at ₹19,999 one-time. The final cost depends on what you want automated and how complex the automation is. You can see the available packages above.",
   },
   {
-    q: "Are there additional software costs?",
-    a: "Our fee covers custom design, engineering, testing, and deployment. If your workflows require paid third-party software plans (such as WhatsApp Business API messaging fees or cloud hosting for n8n/Make), you pay those directly to the providers at cost. We help you choose the most economical options.",
-  },
-  {
-    q: "How is my business data handled?",
-    a: "Workflows execute directly between your designated tools and accounts. We do not store or sell your business or customer records. We follow strict data-handling practices during setup and test with anonymized or dummy data whenever feasible.",
-  },
-  {
-    q: "Can I start with just one workflow?",
-    a: "Yes. Our Starter plan is specifically designed for businesses wanting to automate a single high-friction bottleneck first. Once you see the time saved and operational clarity, you can automate additional workflows as needed.",
+    q: "How do we get started?",
+    a: "Simply tell us about one repetitive task that takes your team's time. We will discuss the current process and identify whether it is worth automating.",
   },
 ]
 
@@ -58,17 +50,17 @@ export default function FAQ() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <div className="max-w-2xl">
           <p className="text-xs font-mono font-semibold uppercase tracking-wider text-primary">
-            Clear Answers
+            FREQUENTLY ASKED QUESTIONS
           </p>
           <h2 className="mt-2 text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Frequently Asked Questions
+            Questions Business Owners Usually Ask
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Everything you need to know about how CoreBot works, ownership, tools, and pricing.
+            A few straightforward answers before we get started.
           </p>
         </div>
 
-        {/* 10 FAQ Accordion Items */}
+        {/* 8 FAQ Accordion Items */}
         <div className="mt-12 space-y-3.5" role="region" aria-label="Frequently Asked Questions">
           {FAQS.map((faq, idx) => {
             const isOpen = openIndex === idx

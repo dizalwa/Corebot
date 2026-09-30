@@ -49,22 +49,22 @@ export default function Footer() {
             <ul className="mt-4 space-y-2.5 text-xs sm:text-sm text-muted-foreground">
               <li>
                 <a href="#solutions" className="transition-colors hover:text-foreground">
-                  Lead &amp; Sales Follow-Up
+                  Get More Leads Handled
                 </a>
               </li>
               <li>
                 <a href="#solutions" className="transition-colors hover:text-foreground">
-                  Customer AI Assistants
+                  Keep Customers Updated
                 </a>
               </li>
               <li>
                 <a href="#solutions" className="transition-colors hover:text-foreground">
-                  Internal Ops &amp; Sheets Sync
+                  Save Staff Time
                 </a>
               </li>
               <li>
                 <a href="#solutions" className="transition-colors hover:text-foreground">
-                  Custom Automations
+                  Automate Your Own Process
                 </a>
               </li>
             </ul>
@@ -138,7 +138,7 @@ export default function Footer() {
               Contact
             </a>
             <a href="#faq" className="hover:text-foreground">
-              Data Privacy FAQ
+              FAQ
             </a>
             <a href="#pricing" className="hover:text-foreground">
               Deliverables &amp; Ownership

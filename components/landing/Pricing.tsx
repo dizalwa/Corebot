@@ -4,8 +4,8 @@ import { Check, ArrowRight } from "lucide-react"
 const TIERS = [
   {
     name: "Starter",
-    tagline: "For a single high-friction operational bottleneck.",
-    price: "₹14,999",
+    tagline: "For a single repetitive task or daily bottleneck.",
+    price: "₹19,999",
     period: "one-time",
     isPopular: false,
     deliverables: [
@@ -18,10 +18,10 @@ const TIERS = [
   },
   {
     name: "Growth",
-    tagline: "Comprehensive automation across customer & internal ops.",
+    tagline: "Automation across customer communication and team tasks.",
     price: "₹34,999",
     period: "one-time",
-    isPopular: true,
+    isPopular: false,
     deliverables: [
       "Up to 3 automations",
       "Unlimited tool connections",
@@ -33,14 +33,14 @@ const TIERS = [
   },
   {
     name: "Custom",
-    tagline: "For multi-department operations and proprietary systems.",
+    tagline: "For growing teams with custom systems and workflows.",
     price: "Let's Discuss",
     period: "tailored quote",
     isPopular: false,
     deliverables: [
       "Complex workflows",
       "Multi-team automation",
-      "Ongoing retainer available",
+      "Tailored scope & support",
     ],
     ctaText: "Discuss Your Workflow",
   },
@@ -140,10 +140,10 @@ export default function Pricing() {
         {/* Reassurance points */}
         <div className="mt-12 rounded-xl border border-border/80 bg-secondary/30 p-5 text-center text-xs text-muted-foreground">
           <p className="font-semibold text-foreground">
-            No retainers. No lock-in. You own everything we build.
+            Every package includes setup, testing, handover and support.
           </p>
           <p className="mt-1">
-            Every automation is deployed directly on your accounts. Pay once, own it forever.
+            You own what we build. No unnecessary lock-in.
           </p>
         </div>
       </div>

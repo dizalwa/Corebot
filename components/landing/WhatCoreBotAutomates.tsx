@@ -11,62 +11,50 @@ import {
 const CATEGORIES = [
   {
     icon: UserCheck,
-    tag: "A. INBOUND REVENUE",
-    title: "Lead & Sales Automation",
-    formula: "Capture → Qualify → Follow up → Update",
+    tag: "1",
+    title: "Get More Leads Handled",
     description:
-      "Eliminate lost leads and delayed responses. When an enquiry arrives, automate instant qualification, CRM updates, and systematic follow-up cadence.",
+      "Respond to new enquiries quickly and make sure promising leads don't get forgotten.",
     examples: [
-      "Instant lead capture from Meta ads, Google ads & website",
-      "Automated lead qualification based on budget & intent",
-      "Multi-channel follow-up via WhatsApp and email",
-      "Instant synchronization with CRM or Google Sheets",
-      "Real-time notifications sent to the designated sales rep",
+      "Automatically respond to new enquiries",
+      "Capture customer requirements",
+      "Send follow-ups when needed",
     ],
   },
   {
     icon: MessageSquare,
-    tag: "B. CLIENT ENGAGEMENT",
-    title: "Customer Communication",
-    formula: "Ask → Understand → Respond → Escalate",
+    tag: "2",
+    title: "Keep Customers Updated",
     description:
-      "Handle routine customer queries 24/7. Provide accurate information without forcing your staff to answer the same questions day and night.",
+      "Keep customers informed without your staff having to remember every message and reminder.",
     examples: [
-      "Custom AI assistants trained on your service catalog & FAQs",
-      "Automated WhatsApp workflows for instant enquiry handling",
-      "Appointment scheduling and rescheduling conversations",
-      "Service status notifications & preparation checklists",
-      "Smooth human handoff when a query requires judgment",
+      "Appointment reminders",
+      "Booking confirmations",
+      "Report or status notifications",
     ],
   },
   {
     icon: Workflow,
-    tag: "C. INTERNAL EFFICIENCY",
-    title: "Business Operations",
-    formula: "Collect → Process → Update → Notify",
+    tag: "3",
+    title: "Save Staff Time",
     description:
-      "Keep internal departments in sync without manual data re-entry. Eliminate copy-pasting across disparate spreadsheets and software.",
+      "Take repetitive office work off your team's daily workload.",
     examples: [
-      "Automated data extraction from invoices, orders, and receipts",
-      "Two-way synchronization between spreadsheets and databases",
-      "Document processing and automated PDF generation",
-      "Cross-team notifications when milestones or tasks update",
-      "Automated client payment reminders and receipt dispatch",
+      "Move information between systems",
+      "Update spreadsheets automatically",
+      "Send routine messages and notifications",
     ],
   },
   {
     icon: Sparkles,
-    tag: "D. BESPOKE LOGIC",
-    title: "Custom Workflows",
-    formula: "Your process → Your custom automation",
+    tag: "4",
+    title: "Automate Your Own Process",
     description:
-      "Every business has unique operational quirks. We map your specific manual sequence and build an automation tailored to your existing software.",
+      "If your business has a repetitive process, CoreBot can turn it into a simpler, more consistent workflow.",
     examples: [
-      "Integration across proprietary or industry-specific software",
-      "Multi-step approval workflows across departments",
-      "Automated client onboarding questionnaires and folders",
-      "Intelligent routing based on custom business rules",
-      "Legacy software connectors via webhook or database sync",
+      "Enquiry-to-appointment process",
+      "Daily reporting",
+      "Internal task assignment",
     ],
   },
 ]
@@ -76,15 +64,15 @@ export default function WhatCoreBotAutomates() {
     <section id="solutions" className="border-b border-border/80 bg-background py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl">
-          <p className="text-xs font-mono font-semibold uppercase tracking-wider text-primary">
-            Solutions Overview
+          <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+            What CoreBot Automates
           </p>
           <h2 className="mt-2 text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Turn repetitive processes into automated workflows.
+            What kind of work can CoreBot take off your team's hands?
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            We focus on business outcomes, practical steps, and seamless tool connections.
-            Here are the four primary areas where businesses automate manual work.
+            Most businesses have routine tasks that take up hours every week.
+            Here are four areas where CoreBot helps.
           </p>
         </div>
 
@@ -99,7 +87,7 @@ export default function WhatCoreBotAutomates() {
               >
                 <div>
                   <div className="flex items-center justify-between pb-4 border-b border-border/70">
-                    <span className="font-mono text-xs font-semibold text-primary">
+                    <span className="text-xs font-semibold text-primary">
                       {cat.tag}
                     </span>
                     <div className="inline-flex size-9 items-center justify-center rounded-lg bg-indigo-50 text-primary">
@@ -111,17 +99,13 @@ export default function WhatCoreBotAutomates() {
                     {cat.title}
                   </h3>
 
-                  <div className="mt-2 inline-flex items-center rounded-md bg-secondary px-2.5 py-1 font-mono text-xs font-medium text-slate-700">
-                    {cat.formula}
-                  </div>
-
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                     {cat.description}
                   </p>
 
                   <div className="mt-6 space-y-2.5">
                     <p className="text-xs font-semibold uppercase tracking-wider text-foreground">
-                      Common Automations Included:
+                      Examples:
                     </p>
                     <ul className="space-y-2 text-xs sm:text-sm text-muted-foreground">
                       {cat.examples.map((ex, i) => (

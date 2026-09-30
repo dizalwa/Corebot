@@ -5,7 +5,7 @@ import ToolEcosystem from "@/components/landing/ToolEcosystem"
 import ProblemSection from "@/components/landing/ProblemSection"
 import WhatCoreBotAutomates from "@/components/landing/WhatCoreBotAutomates"
 import RealAutomationExamples from "@/components/landing/RealAutomationExamples"
-import InteractiveDemos from "@/components/landing/InteractiveDemos"
+
 import BeforeAfter from "@/components/landing/BeforeAfter"
 import WhoWeHelp from "@/components/landing/WhoWeHelp"
 import HowItWorks from "@/components/landing/HowItWorks"
@@ -41,8 +41,6 @@ export default function Home() {
         {/* 6. Real Automation Examples (Diagnostic, Real Estate, Coaching) */}
         <RealAutomationExamples />
 
-        {/* 7. Interactive Demos: 3 Live Simulations */}
-        <InteractiveDemos />
 
         {/* 8. Before vs After Comparison */}
         <BeforeAfter />

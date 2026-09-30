@@ -7,9 +7,9 @@ const TOOLS = [
   { name: "Airtable", category: "Database" },
   { name: "Notion", category: "Docs & Ops" },
   { name: "Slack", category: "Team Alerts" },
-  { name: "HubSpot / Zoho", category: "CRM" },
-  { name: "OpenAI & Claude", category: "AI Logic" },
-  { name: "n8n & Make", category: "Workflows" },
+  { name: "Customer Records", category: "Customer Records" },
+  { name: "AI Assistants", category: "Smart Assistance" },
+  { name: "Business Tools", category: "Automated Processes" },
   { name: "Meta Lead Ads", category: "Inbound Leads" },
 ]
 

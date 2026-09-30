@@ -31,7 +31,7 @@ export default function Navbar() {
             <circle cx="45" cy="32" r="5.5" fill="currentColor" />
           </svg>
           <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tight leading-tight text-foreground">
+            <span className="inline-block text-xl font-bold tracking-tight leading-tight text-foreground scale-x-[1.38] origin-left">
               Core<span className="text-primary">Bot</span>
             </span>
             <span className="text-[8.5px] font-semibold tracking-wider text-muted-foreground uppercase leading-none">
@@ -134,7 +134,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="rounded-md px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
             >
-              Use Cases & Demos
+              Use Cases
             </a>
             <a
               href="#how-it-works"

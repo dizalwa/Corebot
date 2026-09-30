@@ -7,9 +7,9 @@ export async function POST(req: Request) {
   try {
     const { name, email, phone, business, message, workflow } = await req.json();
 
-    if (!name || !email || !message) {
+    if (!name || !message) {
       return NextResponse.json(
-        { error: "Name, email, and message are required." },
+        { error: "Name and message are required." },
         { status: 400 }
       );
     }
@@ -17,11 +17,11 @@ export async function POST(req: Request) {
     const { error } = await resend.emails.send({
       from: "CoreBot <onboarding@send.corebot.in>",
       to: ["hellocorebot@gmail.com"],
-      replyTo: email,
+      ...(email ? { replyTo: email } : {}),
       subject: `New enquiry from ${name}${business ? ` — ${business}` : ""}`,
       text: `
 Name: ${name}
-Email: ${email}
+Email: ${email || "Not provided"}
 Phone / WhatsApp: ${phone || "Not provided"}
 Business: ${business || "—"}
 Workflow Interest: ${workflow || "General Automation"}
