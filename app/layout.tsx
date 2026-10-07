@@ -49,12 +49,14 @@ export const metadata: Metadata = {
     title: "CoreBot | Practical AI Automation for Growing Businesses",
     description:
       "CoreBot builds practical AI automations for businesses, helping automate repetitive tasks, customer communication, lead follow-ups and everyday workflows.",
+    images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "CoreBot | Practical AI Automation for Growing Businesses",
     description:
       "CoreBot builds practical AI automations for businesses, helping automate repetitive tasks, customer communication, lead follow-ups and everyday workflows.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
