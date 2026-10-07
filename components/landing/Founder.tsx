@@ -40,10 +40,10 @@ export default function Founder() {
                 <div className="flex items-center gap-1.5">
                   <Mail className="size-4 text-slate-500" />
                   <a
-                    href="mailto:hellocorebot@gmail.com"
+                    href="mailto:vipul@corebot.in"
                     className="text-primary hover:underline"
                   >
-                    hellocorebot@gmail.com
+                    vipul@corebot.in
                   </a>
                 </div>
               </div>

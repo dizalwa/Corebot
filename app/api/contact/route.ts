@@ -43,7 +43,7 @@ export async function POST(req: Request) {
 
     const { error } = await resend.emails.send({
       from: "CoreBot <onboarding@send.corebot.in>",
-      to: ["hellocorebot@gmail.com"],
+      to: ["vipul@corebot.in"],
       ...(typeof email === "string" && email ? { replyTo: email } : {}),
       subject: `New enquiry from ${name.trim()}${typeof business === "string" && business ? ` — ${business}` : ""}`,
       text: `

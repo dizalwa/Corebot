@@ -46,7 +46,7 @@ export default function FinalCTA() {
             <div className="space-y-2.5 text-xs text-muted-foreground pt-2">
               <div className="flex items-center gap-2">
                 <Mail className="size-4 text-slate-500 shrink-0" />
-                <span>Email: <a href="mailto:hellocorebot@gmail.com" className="text-primary hover:underline">hellocorebot@gmail.com</a></span>
+                <span>Email: <a href="mailto:vipul@corebot.in" className="text-primary hover:underline">vipul@corebot.in</a></span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="size-4 text-slate-500 shrink-0" />

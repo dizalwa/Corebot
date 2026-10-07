@@ -80,7 +80,7 @@ const jsonLd = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    email: "hellocorebot@gmail.com",
+    email: "vipul@corebot.in",
     contactType: "customer service",
   },
 }

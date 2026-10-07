@@ -58,10 +58,10 @@ export default function PrivacyPage() {
               To ask about information you have provided to CoreBot, contact us
               at{" "}
               <a
-                href="mailto:hellocorebot@gmail.com"
+                href="mailto:vipul@corebot.in"
                 className="text-primary hover:underline"
               >
-                hellocorebot@gmail.com
+                vipul@corebot.in
               </a>
               .
             </p>

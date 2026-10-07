@@ -137,10 +137,10 @@ export default function Footer() {
               <li className="flex items-center gap-1.5">
                 <Mail className="size-3.5 text-primary" />
                 <a
-                  href="mailto:hellocorebot@gmail.com"
+                  href="mailto:vipul@corebot.in"
                   className="break-all hover:text-foreground"
                 >
-                  hellocorebot@gmail.com
+                  vipul@corebot.in
                 </a>
               </li>
               <li className="flex items-center gap-1.5">
