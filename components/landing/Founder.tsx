@@ -74,7 +74,7 @@ export default function Founder() {
               </p>
               <div className="pt-2">
                 <a
-                  href="https://wa.me/918102417697"
+                  href="https://wa.me/917970927377"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline"

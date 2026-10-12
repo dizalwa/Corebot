@@ -32,7 +32,7 @@ export default function FinalCTA() {
                 We can discuss it directly.
               </p>
               <a
-                href="https://wa.me/918102417697"
+                href="https://wa.me/917970927377"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-xs transition-colors hover:bg-emerald-700"

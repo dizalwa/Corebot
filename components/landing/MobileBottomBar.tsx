@@ -11,7 +11,7 @@ export default function MobileBottomBar() {
     >
       <div className="flex items-center gap-2 max-w-md mx-auto">
         <a
-          href="https://wa.me/918102417697"
+          href="https://wa.me/917970927377"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 flex items-center justify-center gap-1.5 rounded-lg border border-border bg-card py-2.5 text-xs font-semibold text-foreground shadow-2xs transition-colors hover:bg-secondary active:scale-[0.98]"

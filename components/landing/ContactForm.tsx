@@ -62,7 +62,7 @@ export default function ContactForm() {
         </p>
         <div className="mt-6 border-t border-emerald-200/60 pt-4">
           <a
-            href="https://wa.me/918102417697"
+            href="https://wa.me/917970927377"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-800 hover:underline"

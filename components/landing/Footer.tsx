@@ -146,12 +146,12 @@ export default function Footer() {
               <li className="flex items-center gap-1.5">
                 <MessageSquare className="size-3.5 text-emerald-600" />
                 <a
-                  href="https://wa.me/918102417697"
+                  href="https://wa.me/917970927377"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-foreground"
                 >
-                  WhatsApp: +91 8102417697
+                  WhatsApp: +91 7970927377
                 </a>
               </li>
               <li className="flex items-center gap-1.5 text-xs text-muted-foreground">

@@ -77,7 +77,7 @@ export default function Navbar() {
         {/* Desktop Action CTAs */}
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href="https://wa.me/918102417697"
+            href="https://wa.me/917970927377"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3.5 py-2 text-xs font-semibold text-foreground shadow-xs transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
@@ -98,7 +98,7 @@ export default function Navbar() {
         {/* Mobile Hamburger Toggle */}
         <div className="flex items-center gap-2 lg:hidden">
           <a
-            href="https://wa.me/918102417697"
+            href="https://wa.me/917970927377"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg border border-border bg-card p-2 text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
@@ -168,7 +168,7 @@ export default function Navbar() {
                 <ArrowRight className="size-4" />
               </a>
               <a
-                href="https://wa.me/918102417697"
+                href="https://wa.me/917970927377"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
