@@ -1,6 +1,6 @@
 import * as React from "react"
 import Image from "next/image"
-import { Mail, MessageSquare, MapPin } from "lucide-react"
+import { Mail, MessageSquare, MapPin, Phone } from "lucide-react"
 
 export default function Founder() {
   return (
@@ -32,13 +32,23 @@ export default function Founder() {
                 Business-first. Practical. Built for real-world SME operations.
               </p>
 
-              <div className="pt-4 flex flex-wrap items-center gap-4 text-xs font-medium text-slate-700">
+              <div className="pt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-medium text-slate-700">
                 <div className="flex items-center gap-1.5">
-                  <MapPin className="size-4 text-slate-500" />
+                  <MapPin className="size-4 text-slate-500 shrink-0" />
                   <span>Based in Ranchi, Jharkhand, India</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Mail className="size-4 text-slate-500" />
+                  <Phone className="size-4 text-slate-500 shrink-0" />
+                  <a
+                    href="tel:+917970927377"
+                    className="text-primary hover:underline"
+                    aria-label="Call +91 7970927377"
+                  >
+                    +91 7970927377
+                  </a>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <Mail className="size-4 text-slate-500 shrink-0" />
                   <a
                     href="mailto:vipul@corebot.in"
                     className="text-primary hover:underline"
@@ -73,15 +83,29 @@ export default function Founder() {
                 Helping growing businesses identify and automate repetitive work with practical automation.
               </p>
               <div className="pt-2">
-                <a
-                  href="https://wa.me/917970927377"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline"
-                >
-                  <MessageSquare className="size-3.5 text-emerald-600" />
-                  <span>Message Directly on WhatsApp</span>
-                </a>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-xs font-semibold">
+                  <a
+                    href="tel:+917970927377"
+                    className="inline-flex items-center gap-1.5 text-primary hover:underline py-1"
+                    aria-label="Call Vipul Kumar at +91 7970927377"
+                  >
+                    <Phone className="size-3.5 text-primary" />
+                    <span>Call: +91 7970927377</span>
+                  </a>
+                  <span className="hidden sm:inline text-muted-foreground/40" aria-hidden="true">
+                    ·
+                  </span>
+                  <a
+                    href="https://wa.me/917970927377"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-primary hover:underline py-1"
+                    aria-label="Message Directly on WhatsApp"
+                  >
+                    <MessageSquare className="size-3.5 text-emerald-600" />
+                    <span>Message Directly on WhatsApp</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

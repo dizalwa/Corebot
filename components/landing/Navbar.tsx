@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Menu, X, MessageSquare, ArrowRight } from "lucide-react"
+import { Menu, X, MessageSquare, ArrowRight, Phone } from "lucide-react"
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
@@ -77,6 +77,14 @@ export default function Navbar() {
         {/* Desktop Action CTAs */}
         <div className="hidden items-center gap-3 lg:flex">
           <a
+            href="tel:+917970927377"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3.5 py-2 text-xs font-semibold text-foreground shadow-xs transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            aria-label="Call CoreBot at +91 7970927377"
+          >
+            <Phone className="size-3.5 text-primary" />
+            <span>Call Us</span>
+          </a>
+          <a
             href="https://wa.me/917970927377"
             target="_blank"
             rel="noopener noreferrer"
@@ -97,6 +105,13 @@ export default function Navbar() {
 
         {/* Mobile Hamburger Toggle */}
         <div className="flex items-center gap-2 lg:hidden">
+          <a
+            href="tel:+917970927377"
+            className="rounded-lg border border-border bg-card p-2 text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            aria-label="Call CoreBot at +91 7970927377"
+          >
+            <Phone className="size-4 text-primary" />
+          </a>
           <a
             href="https://wa.me/917970927377"
             target="_blank"
@@ -166,6 +181,15 @@ export default function Navbar() {
               >
                 <span>Discuss Your Workflow</span>
                 <ArrowRight className="size-4" />
+              </a>
+              <a
+                href="tel:+917970927377"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center justify-center gap-2 rounded-lg border border-border bg-card py-2.5 text-sm font-semibold text-foreground shadow-xs transition-colors hover:bg-secondary"
+                aria-label="Call CoreBot at +91 7970927377"
+              >
+                <Phone className="size-4 text-primary" />
+                <span>Call: +91 7970927377</span>
               </a>
               <a
                 href="https://wa.me/917970927377"

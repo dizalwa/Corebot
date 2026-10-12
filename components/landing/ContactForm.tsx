@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Send, CheckCircle2, MessageSquare, AlertCircle } from "lucide-react"
+import { Send, CheckCircle2, MessageSquare, AlertCircle, Phone } from "lucide-react"
 
 export default function ContactForm() {
   const [status, setStatus] = React.useState<
@@ -61,15 +61,28 @@ export default function ContactForm() {
           Thank you! We will review your details and get back to you shortly.
         </p>
         <div className="mt-6 border-t border-emerald-200/60 pt-4">
-          <a
-            href="https://wa.me/917970927377"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-800 hover:underline"
-          >
-            <MessageSquare className="size-3.5" />
-            <span>Want a quicker reply? Chat on WhatsApp</span>
-          </a>
+          <p className="text-xs text-muted-foreground mb-2">Want a quicker reply?</p>
+          <div className="flex flex-wrap items-center justify-center gap-3 text-xs font-semibold text-emerald-800">
+            <a
+              href="tel:+917970927377"
+              className="inline-flex items-center gap-1.5 hover:underline"
+              aria-label="Call +91 7970927377"
+            >
+              <Phone className="size-3.5" />
+              <span>Call: +91 7970927377</span>
+            </a>
+            <span className="text-emerald-300" aria-hidden="true">·</span>
+            <a
+              href="https://wa.me/917970927377"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 hover:underline"
+              aria-label="Chat on WhatsApp"
+            >
+              <MessageSquare className="size-3.5" />
+              <span>Chat on WhatsApp</span>
+            </a>
+          </div>
         </div>
       </div>
     )

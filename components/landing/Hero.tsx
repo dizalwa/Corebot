@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { ArrowRight, MessageSquare, CheckCircle2, ChevronDown } from "lucide-react"
+import { ArrowRight, MessageSquare, CheckCircle2, ChevronDown, Phone } from "lucide-react"
 
 const BUSINESS_STEPS = [
   {
@@ -243,8 +243,23 @@ export default function Hero() {
               </a>
             </div>
 
+            {/* Direct Phone Call Prompt */}
+            <p className="flex items-center gap-1.5 text-xs text-slate-300 font-medium pt-1">
+              <Phone className="size-3 text-blue-400 shrink-0" />
+              <span>
+                Prefer a phone call?{" "}
+                <a
+                  href="tel:+917970927377"
+                  className="font-semibold text-white underline decoration-slate-500 underline-offset-4 transition-colors hover:text-blue-400 hover:decoration-blue-400"
+                  aria-label="Call +91 7970927377"
+                >
+                  +91 7970927377
+                </a>
+              </span>
+            </p>
+
             {/* Trust Line */}
-            <p className="text-xs text-slate-400 font-medium pt-1">
+            <p className="text-xs text-slate-400 font-medium">
               Based in Ranchi · Built for Indian SMEs · Start with one process
             </p>
           </div>

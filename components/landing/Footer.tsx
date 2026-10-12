@@ -1,5 +1,5 @@
 import * as React from "react"
-import { MessageSquare, Mail, MapPin } from "lucide-react"
+import { MessageSquare, Mail, MapPin, Phone } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -135,12 +135,12 @@ export default function Footer() {
             </h4>
             <ul className="mt-4 space-y-2.5 text-xs text-muted-foreground sm:text-sm">
               <li className="flex items-center gap-1.5">
-                <Mail className="size-3.5 text-primary" />
+                <Phone className="size-3.5 text-primary" />
                 <a
-                  href="mailto:vipul@corebot.in"
-                  className="break-all hover:text-foreground"
+                  href="tel:+917970927377"
+                  className="hover:text-foreground"
                 >
-                  vipul@corebot.in
+                  Phone: +91 7970927377
                 </a>
               </li>
               <li className="flex items-center gap-1.5">
@@ -152,6 +152,15 @@ export default function Footer() {
                   className="hover:text-foreground"
                 >
                   WhatsApp: +91 7970927377
+                </a>
+              </li>
+              <li className="flex items-center gap-1.5">
+                <Mail className="size-3.5 text-primary" />
+                <a
+                  href="mailto:vipul@corebot.in"
+                  className="break-all hover:text-foreground"
+                >
+                  vipul@corebot.in
                 </a>
               </li>
               <li className="flex items-center gap-1.5 text-xs text-muted-foreground">

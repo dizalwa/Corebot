@@ -1,6 +1,6 @@
 import * as React from "react"
 import ContactForm from "./ContactForm"
-import { MessageSquare, Mail, MapPin } from "lucide-react"
+import { MessageSquare, Mail, MapPin, Phone } from "lucide-react"
 
 export default function FinalCTA() {
   return (
@@ -44,6 +44,10 @@ export default function FinalCTA() {
 
             {/* Contact Details */}
             <div className="space-y-2.5 text-xs text-muted-foreground pt-2">
+              <div className="flex items-center gap-2">
+                <Phone className="size-4 text-slate-500 shrink-0" />
+                <span>Phone: <a href="tel:+917970927377" className="text-primary hover:underline">+91 7970927377</a></span>
+              </div>
               <div className="flex items-center gap-2">
                 <Mail className="size-4 text-slate-500 shrink-0" />
                 <span>Email: <a href="mailto:vipul@corebot.in" className="text-primary hover:underline">vipul@corebot.in</a></span>
