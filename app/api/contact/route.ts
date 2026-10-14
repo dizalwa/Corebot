@@ -27,6 +27,32 @@ export async function POST(req: Request) {
       )
     }
 
+    const webhookUrl =
+      process.env.N8N_WEBHOOK_URL ||
+      "https://dizalwa.app.n8n.cloud/webhook/corebot-lead"
+
+    try {
+      const webhookRes = await fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name.trim(),
+          phone: phone.trim(),
+          business: typeof business === "string" ? business.trim() : "",
+          requirement: message.trim(),
+        }),
+        signal: AbortSignal.timeout(5000),
+      })
+
+      if (!webhookRes.ok) {
+        console.error(
+          `n8n webhook responded with status ${webhookRes.status}: ${webhookRes.statusText}`
+        )
+      }
+    } catch (webhookErr) {
+      console.error("Failed to forward lead to n8n webhook:", webhookErr)
+    }
+
     const apiKey = process.env.RESEND_API_KEY
 
     if (!apiKey) {
