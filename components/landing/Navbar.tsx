@@ -7,8 +7,8 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/80 bg-background/90 backdrop-blur-md transition-colors">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+    <header className="sticky top-0 z-50 border-b border-[#dfd8cd]/80 bg-[#f8f5ef]/90 backdrop-blur-xl transition-colors">
+      <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between px-4 sm:px-6">
         {/* Brand Logo */}
         <a
           href="/"
@@ -31,7 +31,7 @@ export default function Navbar() {
             <circle cx="45" cy="32" r="5.5" fill="currentColor" />
           </svg>
           <div className="flex flex-col">
-            <span className="inline-block text-xl font-bold tracking-tight leading-tight text-foreground scale-x-[1.38] origin-left">
+            <span className="inline-block text-[1.35rem] font-bold tracking-[-0.08em] leading-tight text-foreground scale-x-[1.25] origin-left">
               Core<span className="text-primary">Bot</span>
             </span>
             <span className="text-[8.5px] font-semibold tracking-wider text-muted-foreground uppercase leading-none">
@@ -78,7 +78,7 @@ export default function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href="tel:+917970927377"
-            className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3.5 py-2 text-xs font-semibold text-foreground shadow-xs transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-2.5 text-xs font-semibold text-foreground shadow-xs transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             aria-label="Call CoreBot at +91 7970927377"
           >
             <Phone className="size-3.5 text-primary" />
@@ -88,7 +88,7 @@ export default function Navbar() {
             href="https://wa.me/917970927377"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3.5 py-2 text-xs font-semibold text-foreground shadow-xs transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-2.5 text-xs font-semibold text-foreground shadow-xs transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             aria-label="Chat with CoreBot on WhatsApp"
           >
             <MessageSquare className="size-3.5 text-emerald-600" />
@@ -96,7 +96,7 @@ export default function Navbar() {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground shadow-xs transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-xs font-semibold text-primary-foreground shadow-sm shadow-primary/20 transition-colors hover:bg-[#d94d3b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >
             <span>Discuss Your Workflow</span>
             <ArrowRight className="size-3.5" />

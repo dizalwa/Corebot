@@ -66,38 +66,51 @@
 }
 
 :root {
-    --background: #F8FAFC;
-    --foreground: oklch(0.15 0.01 240);
-    --card: #FFFFFF;
-    --card-foreground: oklch(0.15 0.01 240);
-    --popover: #FFFFFF;
-    --popover-foreground: oklch(0.15 0.01 240);
-    --primary: oklch(0.51 0.23 268);
-    --primary-foreground: oklch(0.99 0 0);
-    --secondary: #F5F8FC;
-    --secondary-foreground: oklch(0.20 0.01 240);
-    --muted: #F1F5F9;
-    --muted-foreground: oklch(0.46 0.015 240);
-    --accent: #EEF2F6;
-    --accent-foreground: oklch(0.20 0.01 240);
+    --background: #f8f5ef;
+    --foreground: #211f1b;
+    --card: #fffdfa;
+    --card-foreground: #211f1b;
+    --popover: #fffdfa;
+    --popover-foreground: #211f1b;
+    --primary: #ed5b47;
+    --primary-foreground: #fffaf3;
+    --secondary: #efeae1;
+    --secondary-foreground: #211f1b;
+    --muted: #f1ece4;
+    --muted-foreground: #6d6860;
+    --accent: #f6dfb4;
+    --accent-foreground: #211f1b;
     --destructive: oklch(0.577 0.245 27.325);
-    --border: #E2E8F0;
-    --input: #E2E8F0;
-    --ring: oklch(0.51 0.23 268);
+    --border: #dfd8cd;
+    --input: #dfd8cd;
+    --ring: #ed5b47;
     --chart-1: oklch(0.51 0.23 268);
     --chart-2: oklch(0.6 0.118 184.704);
     --chart-3: oklch(0.398 0.07 227.392);
     --chart-4: oklch(0.828 0.189 84.429);
     --chart-5: oklch(0.769 0.188 70.08);
-    --radius: 0.625rem;
-    --sidebar: #FFFFFF;
-    --sidebar-foreground: oklch(0.15 0.01 240);
-    --sidebar-primary: oklch(0.51 0.23 268);
-    --sidebar-primary-foreground: oklch(0.99 0 0);
-    --sidebar-accent: #F5F8FC;
-    --sidebar-accent-foreground: oklch(0.20 0.01 240);
-    --sidebar-border: #E2E8F0;
-    --sidebar-ring: oklch(0.51 0.23 268);
+    --radius: 1.25rem;
+    --sidebar: #fffdfa;
+    --sidebar-foreground: #211f1b;
+    --sidebar-primary: #ed5b47;
+    --sidebar-primary-foreground: #fffaf3;
+    --sidebar-accent: #efeae1;
+    --sidebar-accent-foreground: #211f1b;
+    --sidebar-border: #dfd8cd;
+    --sidebar-ring: #ed5b47;
+}
+
+@layer base {
+  body {
+    background-image: radial-gradient(circle at 15% 0%, rgb(255 255 255 / 72%), transparent 28rem), linear-gradient(115deg, rgb(33 31 27 / 0.018) 1px, transparent 1px);
+    background-size: auto, 5px 5px;
+  }
+
+  h1, h2, h3 { letter-spacing: -0.045em; }
+  main > section { position: relative; }
+  main > section:nth-child(even) { background-color: #efeae1; }
+  main > section [class*="shadow-2xs"] { box-shadow: 0 1px 0 rgb(33 31 27 / 0.06), 0 12px 28px rgb(71 54 32 / 0.045); }
+  main > section [class*="rounded-xl"], main > section [class*="rounded-2xl"] { border-radius: 1.5rem; }
 }
 
 .dark {
@@ -144,5 +157,72 @@
   }
   body {
     @apply bg-background text-foreground antialiased min-h-screen selection:bg-indigo-100 selection:text-indigo-900;
+  }
+}
+
+/* Landing-page art direction: warm paper surfaces, soft outlines and generously
+   rounded product cards keep the long-form page visually consistent. */
+main > section:not(:first-child) {
+  overflow: clip;
+}
+
+main > section > div {
+  max-width: 80rem;
+}
+
+main > section h2 {
+  letter-spacing: -0.06em;
+}
+
+main > section:not(:first-child) [class~="bg-card"] {
+  box-shadow: 0 1px 0 rgb(33 31 27 / 0.07), 0 18px 42px rgb(80 57 31 / 0.055);
+}
+
+main > section [class~="rounded-xl"] {
+  border-radius: 1.5rem;
+}
+
+main > section [class~="rounded-2xl"] {
+  border-radius: 2rem;
+}
+
+main > section a[class~="rounded-lg"],
+main > section button[class~="rounded-lg"] {
+  border-radius: 9999px;
+}
+
+main > section [class*="hover:border-slate"]:hover {
+  border-color: rgb(237 91 71 / 0.48);
+  transform: translateY(-3px);
+}
+
+main > section [class*="bg-indigo-50"] {
+  background-color: #fbebc8;
+}
+
+main > section [class*="border-indigo-100"],
+main > section [class*="border-indigo-200"] {
+  border-color: #edc77c;
+}
+
+main > section [class*="bg-slate-100"],
+main > section [class*="bg-slate-50"] {
+  background-color: #efeae1;
+}
+
+main > section [class*="text-slate-700"],
+main > section [class*="text-slate-600"],
+main > section [class*="text-slate-500"] {
+  color: #625a50;
+}
+
+main > section [class*="text-slate-300"] {
+  color: #c9bdac;
+}
+
+@media (min-width: 640px) {
+  main > section > div > div:first-child > h2 {
+    font-size: 3.15rem;
+    line-height: 0.98;
   }
 }

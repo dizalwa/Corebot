@@ -49,32 +49,32 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative overflow-hidden border-b border-slate-800/80 bg-[#070D1E] pt-16 pb-20 md:pt-24 md:pb-28">
+    <section className="relative overflow-hidden border-b border-[#dfd8cd] bg-[#f8f5ef] pt-16 pb-20 md:pt-24 md:pb-28">
       {/* Ambient top blue radial glow */}
       <div
-        className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[550px] rounded-full bg-blue-600/[0.14] blur-[120px] -z-10"
+        className="pointer-events-none absolute -top-48 left-1/2 -translate-x-1/2 h-[580px] w-[980px] rounded-full bg-[#f7c570]/[0.30] blur-[120px] -z-10"
         aria-hidden="true"
       />
 
       {/* Subtle secondary cyan glow behind right interactive workflow monitor */}
       <div
-        className="pointer-events-none absolute top-1/4 -right-20 w-[550px] h-[550px] rounded-full bg-cyan-500/[0.08] blur-[100px] -z-10"
+        className="pointer-events-none absolute top-1/4 -right-20 h-[550px] w-[550px] rounded-full bg-[#ed5b47]/[0.11] blur-[100px] -z-10"
         aria-hidden="true"
       />
 
       {/* Subtle deep indigo fill on bottom-left */}
       <div
-        className="pointer-events-none absolute -bottom-20 left-0 w-[500px] h-[400px] rounded-full bg-indigo-600/[0.08] blur-[110px] -z-10"
+        className="pointer-events-none absolute -bottom-20 left-0 h-[400px] w-[500px] rounded-full bg-[#d9d98d]/[0.18] blur-[110px] -z-10"
         aria-hidden="true"
       />
 
-      {/* Subtle technical grid pattern with soft radial falloff */}
+      {/* Subtle paper texture with soft radial falloff */}
       <div
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           backgroundImage:
-            "linear-gradient(to right, rgba(96, 165, 250, 0.12) 1px, transparent 1px), linear-gradient(to bottom, rgba(96, 165, 250, 0.12) 1px, transparent 1px)",
-          backgroundSize: "36px 36px",
+            "radial-gradient(rgba(33,31,27,0.12) 0.6px, transparent 0.6px)",
+          backgroundSize: "7px 7px",
           maskImage: "radial-gradient(ellipse 95% 80% at 50% 45%, black 60%, transparent 100%)",
           WebkitMaskImage:
             "radial-gradient(ellipse 95% 80% at 50% 45%, black 60%, transparent 100%)",
@@ -203,20 +203,20 @@ export default function Hero() {
         <circle cx="630" cy="280" r="2.75" fill="#818CF8" opacity="0.9" />
       </svg>
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
           {/* Left Column: Core Value Proposition */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-950/60 px-3.5 py-1 text-xs font-semibold text-blue-300 tracking-wide backdrop-blur-xs">
-              <span className="size-1.5 rounded-full bg-blue-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#211f1b]/15 bg-[#fffdfa]/75 px-3.5 py-1.5 text-[11px] font-bold text-[#4f473d] tracking-[0.12em] backdrop-blur-xs">
+              <span className="size-1.5 rounded-full bg-primary animate-pulse" />
               <span>PRACTICAL AI AUTOMATION FOR BUSINESSES</span>
             </div>
 
-            <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
+            <h1 className="max-w-3xl text-4xl font-bold tracking-[-0.07em] text-foreground sm:text-6xl lg:text-[4.25rem] lg:leading-[0.98]">
               Stop Doing Work Your Business Can Automate.
             </h1>
 
-            <p className="max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">
+            <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               CoreBot helps businesses reduce repetitive follow-ups, customer communication,
               data entry and routine work — so your team can spend more time on the work that
               actually grows the business.
@@ -226,7 +226,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <a
                 href="#calculator"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-md shadow-blue-950/60 transition-all hover:bg-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:bg-[#d94d3b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#f8f5ef]"
               >
                 <span>Find What You Can Automate</span>
                 <ArrowRight className="size-4" />
@@ -236,7 +236,7 @@ export default function Hero() {
                 href="https://wa.me/917970927377"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-900/80 px-5 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-slate-800 hover:border-slate-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#211f1b]/15 bg-[#fffdfa]/80 px-5 py-3.5 text-sm font-semibold text-foreground shadow-sm transition-all hover:bg-white hover:border-[#211f1b]/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#f8f5ef]"
               >
                 <MessageSquare className="size-4 text-emerald-400" />
                 <span>Chat on WhatsApp</span>
@@ -244,13 +244,13 @@ export default function Hero() {
             </div>
 
             {/* Direct Phone Call Prompt */}
-            <p className="flex items-center gap-1.5 text-xs text-slate-300 font-medium pt-1">
-              <Phone className="size-3 text-blue-400 shrink-0" />
+            <p className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium pt-1">
+              <Phone className="size-3 text-primary shrink-0" />
               <span>
                 Prefer a phone call?{" "}
                 <a
                   href="tel:+917970927377"
-                  className="font-semibold text-white underline decoration-slate-500 underline-offset-4 transition-colors hover:text-blue-400 hover:decoration-blue-400"
+                  className="font-semibold text-foreground underline decoration-[#b5aca0] underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
                   aria-label="Call +91 7970927377"
                 >
                   +91 7970927377
@@ -259,20 +259,20 @@ export default function Hero() {
             </p>
 
             {/* Trust Line */}
-            <p className="text-xs text-slate-400 font-medium">
+            <p className="text-xs text-muted-foreground font-medium">
               Based in Ranchi · Built for Indian SMEs · Start with one process
             </p>
           </div>
 
           {/* Right Column: Simple Business Scenario Visual */}
           <div className="lg:col-span-5">
-            <div className="relative rounded-2xl border border-slate-700/80 bg-[#0C1427]/90 backdrop-blur-md p-5 sm:p-6 shadow-2xl shadow-black/40">
+            <div className="relative rounded-[2rem] border border-[#211f1b]/10 bg-[#211f1b] p-5 text-[#fffaf3] shadow-2xl shadow-[#6a4a28]/20 sm:p-6">
               {/* Header */}
-              <div className="pb-4 border-b border-slate-800">
+              <div className="pb-4 border-b border-white/15">
                 <p className="text-sm font-semibold text-white">
                   What happens when a new customer enquires
                 </p>
-                <p className="text-xs text-slate-400 mt-0.5">
+                <p className="text-xs text-white/55 mt-0.5">
                   Handled automatically — with less manual work for your team
                 </p>
               </div>
@@ -289,20 +289,20 @@ export default function Hero() {
                       <div
                         className={`relative flex items-center gap-3.5 rounded-xl border p-3 transition-all duration-300 ${
                           isActive
-                            ? "border-blue-500/80 bg-blue-950/60 shadow-md shadow-blue-950/50 ring-1 ring-blue-500/30"
+                            ? "border-[#f7c570]/80 bg-[#fffaf3]/10 shadow-md shadow-black/20 ring-1 ring-[#f7c570]/30"
                             : isCompleted
-                              ? "border-slate-800 bg-slate-900/70"
-                              : "border-slate-800/40 bg-slate-950/40 opacity-55"
+                              ? "border-white/15 bg-white/8"
+                              : "border-white/10 bg-white/[0.03] opacity-55"
                         }`}
                       >
                         {/* Step Icon */}
                         <div
                           className={`flex size-9 shrink-0 items-center justify-center rounded-lg text-base transition-colors ${
                             isActive
-                              ? "bg-blue-600/20 text-blue-400"
+                              ? "bg-[#f7c570] text-[#211f1b]"
                               : isCompleted
-                                ? "bg-emerald-950/50 text-emerald-400 border border-emerald-500/20"
-                                : "bg-slate-800/50 text-slate-400"
+                                ? "bg-emerald-500/15 text-emerald-300 border border-emerald-400/20"
+                                : "bg-white/10 text-white/50"
                           }`}
                         >
                           {isCompleted ? (
@@ -319,8 +319,8 @@ export default function Hero() {
                               isActive
                                 ? "text-white"
                                 : isCompleted
-                                  ? "text-slate-200"
-                                  : "text-slate-400"
+                                  ? "text-white/80"
+                                  : "text-white/45"
                             }`}
                           >
                             {step.label}
@@ -328,10 +328,10 @@ export default function Hero() {
                           <p
                             className={`text-[11px] sm:text-xs mt-0.5 leading-snug transition-colors ${
                               isActive
-                                ? "text-slate-300"
+                                ? "text-white/65"
                                 : isCompleted
-                                  ? "text-slate-400"
-                                  : "text-slate-500"
+                                  ? "text-white/50"
+                                  : "text-white/35"
                             }`}
                           >
                             {step.description}
@@ -347,8 +347,8 @@ export default function Hero() {
                               idx < activeStep
                                 ? "text-emerald-400/80"
                                 : idx === activeStep
-                                  ? "text-blue-400"
-                                  : "text-slate-700"
+                                  ? "text-[#f7c570]"
+                                  : "text-white/15"
                             }`}
                           />
                         </div>
@@ -359,8 +359,8 @@ export default function Hero() {
               </div>
 
               {/* Footer note */}
-              <div className="mt-4 pt-3 border-t border-slate-800">
-                <p className="text-[11px] text-slate-400 text-center">
+              <div className="mt-4 pt-3 border-t border-white/15">
+                <p className="text-[11px] text-white/50 text-center">
                   The routine work is handled automatically, so your team can focus on customers.
                 </p>
               </div>
