@@ -28,9 +28,9 @@ const INDUSTRIES = [
   },
   {
     icon: GraduationCap,
-    title: "Coaching & Education Institutes",
+    title: "Educational Institutions",
     description:
-      "Handle routine student enquiries, information sharing and follow-ups.",
+      "Automate student enquiries, information sharing and follow-ups for schools, colleges and other educational institutions.",
   },
   {
     icon: Layers,

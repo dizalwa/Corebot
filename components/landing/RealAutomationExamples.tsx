@@ -32,9 +32,9 @@ const EXAMPLES = [
   },
   {
     icon: GraduationCap,
-    title: "Coaching Institute: From Enquiry to Admission",
+    title: "Educational Institutions: From Enquiry to Admission",
     intro:
-      "Keep prospective students engaged without your team manually following up with every enquiry.",
+      "Keep prospective students and parents engaged without your team manually following up with every enquiry.",
     steps: [
       "Student enquires",
       "Information is sent",
